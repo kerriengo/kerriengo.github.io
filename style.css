@@ -1166,3 +1166,7 @@ body.film .main .box p.fine { color: var(--my-headline) !important; }
 
 /* the "what i do" paragraph: tighter space between its lines (change 1.4 to adjust) */
 body.film .main .box p.do-note { line-height: 1.4; }
+
+/* photography: no print borders, no tilt, no shadow. just the photos */
+.frame img { border: 0; box-shadow: none; }
+.frame { transform: none; }
