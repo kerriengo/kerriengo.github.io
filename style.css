@@ -856,3 +856,10 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .press-art { position: absolute; inset: 0; display: grid; place-content: center; gap: 10px; text-align: center; background: var(--cream); color: var(--c5); font-family: var(--serif-g); font-size: 24px; letter-spacing: .08em; line-height: 1.15; padding: 0 14px; transition: opacity .8s ease; }
 .press-art small { font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--c8); }
 .tile.press:hover .press-art, .tile.press:focus-visible .press-art { opacity: .1; }
+
+
+/* the year label row: label on the left, the count on the same line at the right */
+.yearlabel { display: flex; justify-content: space-between; align-items: center; max-width: var(--my-content-w); }
+.yearlabel > span:first-child::after { content: ""; display: inline-block; width: 46px; height: 1px; margin-left: 14px; vertical-align: middle; background: var(--c4); }
+.yearlabel::after { content: none; }
+.yl-count { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--my-muted); }
