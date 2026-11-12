@@ -870,3 +870,16 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 
 /* the "from my work at BetterHelp" line sits right under "a few numbers" */
 .box .fine.fine-top { margin: 4px 0 14px; }
+
+/* ===== SECTION: "view the full campaign" button under each section on the Work page =====
+   WHAT: each section shows its first 4 posts, then this button opens the whole campaign.
+   EDIT: colours/size here. To show more or fewer posts per section, edit work.html (ask for help) . ===== */
+.more-row { display: flex; align-items: center; gap: 22px; max-width: var(--my-content-w); margin: -26px 0 64px; }
+.more-row::before, .more-row::after { content: ""; flex: 1; height: 1px; background: rgba(252, 228, 193, .22); }
+.more-btn { display: inline-flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--my-text); border: 1.5px solid var(--c4); border-radius: 999px; padding: 12px 26px; background: rgba(200, 150, 79, .12); transition: background .25s ease, color .25s ease, transform .25s ease; }
+.more-btn .more-n { color: var(--my-muted); }
+.more-btn b { font-weight: 400; font-size: 16px; transition: transform .25s ease; }
+.more-btn:hover, .more-btn:focus-visible { background: var(--c4); color: #3a2f27; transform: translateY(-2px); outline: none; }
+.more-btn:hover .more-n, .more-btn:focus-visible .more-n { color: #3a2f27; }
+.more-btn:hover b { transform: translateX(4px); }
+@media (max-width: 560px) { .more-btn { padding: 10px 16px; letter-spacing: .1em; } .more-row::before, .more-row::after { display: none; } .more-row { justify-content: center; } }

@@ -62,11 +62,11 @@ _old-versions/        Old drafts. Stays on my computer. Never uploaded.
 ### How the Work page is built (read this before editing posts)
 
 - The **home page** shows one tile per campaign (2025 row, 2026 row).
-- The **Work page** shows every post from **September 2025 on**, in one section per campaign, oldest first. Each section has a "view campaign" link.
+- The **Work page** shows the **first 4 posts** of each campaign (one row), then a "view the full campaign" button that opens that campaign's page with every post. The big count at the top still counts all posts.
 - The **Social archive** holds the earlier 2025 posts (before September 2025).
 - **Culture and trends** is its own section: TSITP (summer 2025, included on purpose even though it is before September), the TLOASG trend and Spotify Wrapped.
 - The **Marketing Brew** tile is an outside link. To change where it goes, search `marketingbrew` in `index.html` and `work.html` (Cmd + Shift + H changes both).
-- Every post card appears in **two places**: on its campaign page and on the Work page. If you change a post's title or remove it, do it in **both** files. Use Cmd + Shift + H (find and replace in all files) to change a title everywhere at once.
+- A post's card appears on its campaign page, and also on the Work page if it is one of the first 4. If you change a post's title or remove it, do it in **both** files. Use Cmd + Shift + H (find and replace in all files) to change a title everywhere at once.
 
 ---
 
