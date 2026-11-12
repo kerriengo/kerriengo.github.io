@@ -1163,6 +1163,3 @@ body.film .main .box p.fine { color: var(--my-headline) !important; }
 .hl:hover i { width: 84px; }
 .hl span { font-size: 13px; letter-spacing: .05em; }
 .hl-col + .hl-col { padding-top: 6px; border-top: 1px solid rgba(252, 228, 193, .12); }
-
-/* the sentence beside each number (like "tiktok daily followers, from 4 to 450 a day") is amber, like the skills labels */
-body.film .hl span, body.film .hl span a { color: var(--c4); }
