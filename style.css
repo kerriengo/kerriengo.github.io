@@ -871,11 +871,11 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 /* the "from my work at BetterHelp" line sits right under "a few numbers" */
 .box .fine.fine-top { margin: 4px 0 14px; }
 
-/* ===== SECTION: "view the full campaign" link under each section on the Work page =====
-   WHAT: each section shows its first 4 posts, then this link opens the whole campaign.
-   EDIT: distance from the posts = margin below. Font = same mono caps as the old "view campaign" link. ===== */
-.more-row { max-width: var(--my-content-w); margin: -52px 0 60px; }
-.more-btn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--my-text); text-decoration: underline; text-decoration-color: var(--c5); text-decoration-thickness: 2px; text-underline-offset: 7px; transition: color .25s ease; }
-.more-btn b { font-weight: 400; font-size: 15px; text-decoration: none; display: inline-block; transition: transform .25s ease; }
-.more-btn:hover, .more-btn:focus-visible { color: var(--c4); outline: none; text-decoration-color: var(--c4); }
-.more-btn:hover b, .more-btn:focus-visible b { transform: translateX(5px); }
+/* ===== SECTION: "view the full campaign" chip under each section on the Work page =====
+   WHAT: same outlined box style as the tools chips. Opens the whole campaign.
+   EDIT: border colour = var(--c4) below. Distance from the posts = the -40px in work.html (style="margin:-40px 0 60px"). ===== */
+.more-row { max-width: var(--my-content-w); margin: -40px 0 60px; }
+.more-btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--my-soft); border: 1px solid var(--c4); padding: 7px 16px; text-decoration: none; transition: background .25s ease, color .25s ease; }
+.more-btn b { font-weight: 400; font-size: 14px; display: inline-block; transition: transform .25s ease; }
+.more-btn:hover, .more-btn:focus-visible { background: var(--c4); color: #3a2f27; outline: none; }
+.more-btn:hover b, .more-btn:focus-visible b { transform: translateX(4px); }
