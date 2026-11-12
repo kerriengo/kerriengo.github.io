@@ -1,0 +1,158 @@
+/* ---------- Colors: change these 4 lines to restyle the whole site ---------- */
+:root {
+  --sage: #848c7d;
+  --cream: #eae6e1;
+  --terracotta: #a8554f;
+  --ink: #1c1c1c;
+}
+
+/* ---------- Fonts ---------- */
+/* Serif display: Cormorant Garamond. Sans: Archivo. Both load from Google Fonts in index.html */
+:root {
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--sage);
+  color: var(--terracotta);
+  font-family: var(--sans);
+  font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+  line-height: 1.35;
+}
+
+a { color: inherit; }
+img { display: block; width: 100%; height: auto; background: rgba(168, 85, 79, 0.15); }
+
+/* ---------- Header ---------- */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 22px 32px;
+  background: var(--sage);
+}
+.site-title {
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.header nav a { margin-left: 18px; text-decoration: none; }
+.header nav a:hover { text-decoration: underline; text-underline-offset: 6px; }
+
+/* ---------- Shared ---------- */
+section { padding: 0 32px; }
+.italic { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  margin: 0;
+}
+.big-caps {
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  font-size: clamp(2.4rem, 6vw, 6rem);
+  margin: 0;
+}
+.link {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 1px;
+}
+
+/* ---------- Hero ---------- */
+.hero { padding-top: 120px; min-height: 100vh; position: relative; overflow: hidden; }
+.hero .email { font-size: clamp(2rem, 3.4vw, 3.4rem); margin: 0; }
+.hero-art { position: relative; margin-top: 8vh; padding-bottom: 8vh; }
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(3.5rem, 17.5vw, 20rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.hero-art img {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 32%;
+  width: 52%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- Select Works ---------- */
+#works { background: var(--cream); padding-top: 110px; padding-bottom: 60px; }
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: end;
+  padding: 64px 0;
+}
+.project .text { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; }
+.project .text .link { margin-top: 40px; }
+.project .tags { margin: 14px 0 0; font-size: 0.9rem; opacity: 0.85; }
+.project.flip .text { order: 2; }
+
+/* ---------- Info ---------- */
+#info { padding-top: 110px; padding-bottom: 40px; }
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 96px;
+}
+.info-grid p { margin: 0 0 1.2em; max-width: 30em; }
+.name { font-size: clamp(2rem, 3.4vw, 3.4rem); text-transform: uppercase; margin: 16px 0 0; }
+.role { font-size: clamp(2rem, 3.4vw, 3.4rem); margin: 40px 0 0; }
+
+.bw img { filter: grayscale(1); }
+
+.skills { margin: 0; padding: 0; list-style: none; }
+.skills li { font-size: clamp(2rem, 4vw, 4rem); line-height: 1.1; }
+
+.experience { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; margin-bottom: 96px; }
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 14px 0;
+}
+.row small { font-size: 0.85rem; }
+.row span { font-size: clamp(1.8rem, 3.6vw, 3.6rem); line-height: 1.05; }
+
+/* ---------- Footer ---------- */
+footer { padding: 40px 32px 48px; }
+footer .name { margin: 0; }
+footer .email { margin: 0; font-size: clamp(1.6rem, 2.6vw, 2.6rem); }
+footer .social { margin-top: 16px; }
+footer .social a { margin-right: 16px; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 760px) {
+  .header { padding: 16px 20px; }
+  section, footer { padding-left: 20px; padding-right: 20px; }
+  .project, .info-grid, .experience { grid-template-columns: 1fr; }
+  .project.flip .text { order: 0; }
+  .hero-art img { width: 70%; top: 40%; }
+  .row { grid-template-columns: 1fr; gap: 0; }
+}
