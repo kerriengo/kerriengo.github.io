@@ -38,6 +38,8 @@
   --side: 20vw;                /* sidebar width. Try 18vw for slimmer or 24vw for wider */
 
   /* ---- ON / OFF ---- */
+  --my-cozy: block;            /* cozy 'now serving' line: block = show, none = hide */
+  --my-cozy-flex: flex;        /* the steaming cup in the sidebar: flex = show, none = hide */
   --my-stamps: block;          /* orange date stamps on photos: block = show, none = hide */
 }
 
@@ -900,3 +902,53 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .stats.stats-3 div:nth-child(5) b { color: #dcab62; }
 @media (max-width: 860px) { .stats.stats-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .stats.stats-3 { grid-template-columns: 1fr; } }
+
+/* ===== SECTION: highlight reel numbers (tumblr-style rows: big number, coloured line that grows, short sentence) =====
+   EDIT: number size = .hl b. Line length = .hl i width (hover width is the second number). Colours = the 6 rules below. ===== */
+.hls { margin: 18px 0 8px; }
+.hl { display: flex; align-items: center; gap: 18px; padding: 12px 0; }
+.hl b { flex: none; width: 150px; font-family: var(--serif-g); font-weight: 400; font-size: 34px; letter-spacing: .04em; line-height: 1; }
+.hl i { position: relative; flex: none; display: block; height: 2px; width: 56px; transition: width .6s ease; }
+.hl i::after { content: ""; position: absolute; right: -4px; top: -3px; width: 4px; height: 4px; border: 2px solid; border-color: inherit; }
+.hl:hover i { width: 120px; }
+.hl span { font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; line-height: 1.6; color: var(--my-soft); }
+.hl.h1 b { color: #d4917a; } .hl.h1 i { background: var(--c5); border-color: var(--c5); }
+.hl.h2 b { color: #96b8cc; } .hl.h2 i { background: var(--c1); border-color: var(--c1); }
+.hl.h3 b { color: #dcab62; } .hl.h3 i { background: var(--c4); border-color: var(--c4); }
+.hl.h4 b { color: #b4c5a0; } .hl.h4 i { background: var(--c2); border-color: var(--c2); }
+.hl.h5 b { color: #d4b491; } .hl.h5 i { background: var(--c3); border-color: var(--c3); }
+.hl.h6 b { color: #b4684a; } .hl.h6 i { background: var(--c6); border-color: var(--c6); }
+@media (max-width: 560px) { .hl { flex-wrap: wrap; gap: 6px 14px; } .hl b { width: auto; } }
+@media (prefers-reduced-motion: reduce) { .hl i { transition: none; } }
+
+/* ===== SECTION: COZY COFFEE-SHOP TOUCHES =====
+   WHAT: the "now serving" line on Home, the steaming cup in the sidebar, and tiles that tilt like polaroids on a cafe table.
+   EDIT: switch off in MY SETTINGS at the top: --my-cozy and --my-cozy-flex to none. Words live in cozy.js. ===== */
+.cafe-chip { display: var(--my-cozy, block); margin: 0 0 18px; font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--my-muted); }
+.cafe-dot { display: inline-block; width: 8px; height: 8px; margin-right: 10px; border-radius: 50%; background: var(--c4); box-shadow: 0 0 0 0 rgba(200, 150, 79, .6); animation: cafeglow 3s ease-in-out infinite; }
+@keyframes cafeglow { 0%, 100% { box-shadow: 0 0 0 0 rgba(200, 150, 79, .55); } 50% { box-shadow: 0 0 0 7px rgba(200, 150, 79, 0); } }
+
+.cup { display: var(--my-cozy-flex, flex); position: relative; flex-direction: column; align-items: center; gap: 6px; width: 100%; margin: 26px 0 0; padding: 0; background: none; border: 0; cursor: pointer; color: var(--c3); font: inherit; }
+.cup svg { width: 46px; height: 36px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s ease, color .3s ease; }
+.cup:hover svg, .cup:focus-visible svg { color: var(--c4); transform: rotate(-6deg); }
+.cup:focus-visible { outline: 1px dashed var(--c4); outline-offset: 4px; }
+.steam { display: flex; gap: 7px; height: 22px; }
+.steam i { display: block; width: 2px; height: 14px; border-radius: 2px; background: var(--c3); opacity: 0; animation: steam 3.2s ease-in-out infinite; }
+.steam i:nth-child(2) { animation-delay: .8s; height: 18px; }
+.steam i:nth-child(3) { animation-delay: 1.6s; }
+@keyframes steam { 0% { opacity: 0; transform: translateY(8px) scaleY(.6); } 40% { opacity: .55; } 100% { opacity: 0; transform: translateY(-10px) scaleY(1.1) translateX(3px); } }
+.cup.pour .steam i { animation-duration: 1.1s; }
+.cup-note { min-height: 1.4em; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: lowercase; color: var(--my-muted); }
+
+.tile { transition: transform .35s ease, box-shadow .35s ease; }
+.tile:hover { transform: translateY(-4px) rotate(-.7deg); box-shadow: 0 14px 26px rgba(20, 12, 6, .35); }
+.tile:nth-child(even):hover { transform: translateY(-4px) rotate(.7deg); }
+.tile.soon:hover, .tile.press:hover { transform: translateY(-3px); }
+.frame img { transition: transform .5s ease, filter .5s ease; }
+.frame:hover img { transform: scale(1.015); filter: brightness(1.06) saturate(1.05); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cafe-dot, .steam i { animation: none; }
+  .steam i { opacity: .35; }
+  .tile, .tile:hover, .tile:nth-child(even):hover, .cup svg, .frame img { transition: none; transform: none; }
+}
