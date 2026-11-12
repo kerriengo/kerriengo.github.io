@@ -110,7 +110,7 @@ Your name, tagline, Instagram name, Formspree ID, nav links.
 2. Top box: type what is there now. Examples:
    - `your-handle` → your Instagram name
    - `YOUR_FORM_ID` → your Formspree form ID
-   - `social media, production &amp; photography` → your new tagline
+   - `social media, creative direction, photography` → your new tagline
 3. Second box: type what you want instead.
 4. Click the **Replace All** icon (two little arrows). Confirm.
 

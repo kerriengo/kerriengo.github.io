@@ -1171,3 +1171,15 @@ body.film .main .box p.do-note { line-height: 1.4; }
 /* photography: no print borders, no tilt, no shadow. just the photos */
 .frame img { border: 0; box-shadow: none; }
 .frame { transform: none; }
+
+/* about: the text box and the polaroid always end at the same line (the general box spacing must not push the box short) */
+.main .about-grid .box { margin-bottom: 0; }
+.main .about-grid { margin-bottom: 22px; }
+
+/* sidebar tagline: three descriptors, each separated by an amber diamond (no commas, no diamonds at the ends) */
+.tagline::before, .tagline::after { content: none; }
+.tagline .dia { color: var(--c4); margin: 0 6px; }
+
+/* tagline: each descriptor stays on its own line with a diamond between them */
+.tagline { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.5; }
+.tagline .dia { margin: 0; font-size: 10px; line-height: 1; }

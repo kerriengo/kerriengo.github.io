@@ -37,7 +37,6 @@ window.CAPTIONS = {
   "q1/january-rewrite-the-stigma": { caption: "Fear of failure. What does it mean to you?", tags: "" }, // rewrite the stigma (8)
   "q1/january-ripple-effect-of-therapy-instagram": { caption: "Therapy begins with one reason.\n\nBut the growth that happens within follows you everywhere. 🌱", tags: "#MentalHealthAwareness #MentalHealthMatters #Healing #Growth" }, // ripple effect of therapy (instagram) (7)
   "q1/january-ripple-effect-of-therapy-linkedin": { caption: "Therapy begins with one reason.\n\nBut the growth that happens within follows you everywhere. 🌱", tags: "" }, // ripple effect of therapy (linkedin) (7)
-  "q1/january-tvc": { caption: "", tags: "" }, // tvc (1)
   "q1/january-therapy-as-a-form-of-control": { caption: "", tags: "" }, // therapy as a form of control (5)
   "q1/march-ideal-self-exercise": { caption: "You can follow every “right” step and still feel disconnected from your own life.\n\nThe job makes sense. The milestones make sense. And yet something still feels off.\n\nSonni Williams, LPC, often works with clients at this point, when outside expectations start to drown out personal preferences.\n\nSmall moments of reflection start to bring clarity back. Little by little, you’re becoming more you.\n\nIf your life was designed around you, what would your ideal day look like? 👇", tags: "" }, // ideal self exercise (5)
   "q1/march-more-from-march": { caption: "", tags: "" }, // more from march (11)
