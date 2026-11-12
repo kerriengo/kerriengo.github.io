@@ -3,123 +3,135 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YOUR NAME | Portfolio</title>
-  <meta name="description" content="Social media, production, and photography portfolio.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Cormorant+Garamond:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+  <meta name="description" content="Kerrie Ngo is a social media and community manager. Organic social campaigns, creator content and photography.">
+  <meta property="og:title" content="Kerrie Ngo | Portfolio">
+  <meta property="og:description" content="Kerrie Ngo is a social media and community manager. Organic social campaigns, creator content and photography.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#fce4c1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23fce4c1'/%3E%3Crect x='5' y='13' width='6' height='6' fill='none' stroke='%236f93a8' stroke-width='2'/%3E%3Crect x='13' y='13' width='6' height='6' fill='none' stroke='%2395a882' stroke-width='2'/%3E%3Crect x='21' y='13' width='6' height='6' fill='none' stroke='%23b0735d' stroke-width='2'/%3E%3C/svg%3E">
+  <title>Kerrie Ngo | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Zen+Maru+Gothic:wght@400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <header class="header">
-    <a class="site-title" href="#top">YOUR NAME</a>
+<body class="film">
+  <!--
+    ✎ HOW TO EDIT THIS PAGE (read me first)
+    1. Press Cmd+F and type the pencil symbol to jump between labels like this one.
+    2. Change ONLY the words between > and <. Never change anything inside < > brackets.
+    3. Press Cmd+S to save. The browser updates by itself.
+    4. Made a mess? Press Cmd+Z, then Cmd+S.
+    Your name, tagline, social links and form ID appear on EVERY page.
+    To change them everywhere at once, press Cmd+Shift+H (find and replace in all files).
+  -->
+  <header class="topbar">
     <nav>
-      <a href="#info">Info</a>
-      <a href="#works">Select Works</a>
+      <a class="on" href="index.html"><span class="ul">home</span></a>
+      <a href="work.html"><span class="ul">work</span></a>
+      <a href="work/photography.html"><span class="ul">photography</span></a>
+      <a href="about.html"><span class="ul">about</span></a>
+      <a href="#contact"><span class="ul">contact</span></a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <p class="email italic">you@example.com</p>
-    <div class="hero-art">
-      <h1>PORTFOLIO</h1>
-      <img src="images/hero.jpg" alt="Describe your hero photo">
+  <!-- ✎ SIDEBAR (same on every page). Change the tagline under your name and the link words. For all pages at once use Cmd+Shift+H. Your round photo is the file images/avatar.jpg. -->
+  <aside class="side">
+    <img class="avatar" src="images/avatar.jpg" alt="Portrait of you">
+    <span class="sqs" aria-hidden="true"><i></i><i></i><i></i></span>
+    <p class="side-name"><span>Kerrie Ngo</span></p>
+    <p class="tagline">social media, production &amp; photography</p>
+    <fieldset class="links">
+      <legend>LINKS</legend>
+      <a class="lk" href="about.html"><span>about</span><b class="ln"></b></a>
+      <a class="lk" href="https://www.instagram.com/your-handle"><span>instagram</span><b class="ln"></b></a>
+      <a class="lk" href="https://www.linkedin.com/in/kerriengo56/"><span>linkedin</span><b class="ln"></b></a>
+      <a class="lk" href="#contact"><span>contact</span><b class="ln"></b></a>
+    </fieldset>
+    <div class="bnav">
+      <a href="index.html"><i class="bi b1">&#8962;</i><span>home</span></a>
+      <a href="#contact"><i class="bi b2">&#9993;</i><span>say hi</span></a>
+      <a href="work.html"><i class="bi b3">&#9638;</i><span>work</span></a>
     </div>
-  </section>
+  </aside>
 
-  <!-- SELECT WORKS -->
-  <section id="works">
-    <h2 class="label"><span class="link" style="text-decoration-thickness:1px">Select Works</span></h2>
+  <main class="main">
+    <h1 class="sr">Kerrie Ngo portfolio</h1>
+    <!-- ✎ HOME INTRO: change the sentence below. Keep it to one or two lines. -->
+    <p class="intro">hi, i'm Kerrie. i'm a social media and community manager. i make content, assist on productions and take photos. based in the bay area.</p>
 
-    <article class="project">
-      <div class="text">
-        <div>
-          <h3 class="big-caps">Project One</h3>
-          <p class="tags">Social media / Campaign</p>
-        </div>
-        <a class="link" href="#">View project</a>
-      </div>
-      <img src="images/project-1.jpg" alt="Project one">
-    </article>
-
-    <article class="project flip">
-      <div class="text">
-        <div>
-          <h3 class="big-caps">Project Two</h3>
-          <p class="tags">Production assisting</p>
-        </div>
-        <a class="link" href="#">View project</a>
-      </div>
-      <img src="images/project-2.jpg" alt="Project two">
-    </article>
-
-    <article class="project">
-      <div class="text">
-        <div>
-          <h3 class="big-caps">Project Three</h3>
-          <p class="tags">Photography</p>
-        </div>
-        <a class="link" href="#">View project</a>
-      </div>
-      <img src="images/project-3.jpg" alt="Project three">
-    </article>
-  </section>
-
-  <!-- INFO -->
-  <section id="info">
-
-    <div class="info-grid">
-      <div>
-        <p>Hi, I'm YOUR NAME. I work in social media, production, and photography. Write one or two plain sentences on who you are and where you are based.</p>
-        <p>Write one more on what you care about making.</p>
-      </div>
-      <div>
-        <img src="images/portrait.jpg" alt="Portrait of you">
-        <p class="name">YOUR NAME</p>
-        <p class="role italic">Social Media &amp; Creative</p>
-      </div>
+    <div class="head" id="work"><h2><span class="sqs in" aria-hidden="true"><i></i><i></i><i></i></span>selected work</h2><span class="count">2026 campaigns</span></div>
+    <!-- ✎ SELECTED WORK TILES. Each block that starts with a tile link is one tile. To remove a tile, delete the whole block. To change words: edit the text inside the strong tag (title) and the role paragraph (small line). The cover picture is the file named in src. -->
+    <div class="grid big">
+      <a style="--tint:#e3e3e1" class="tile" href="work/q1-feel-lighter.html">
+        <div class="shot"><img src="images/work/q1/cover.jpg" alt="feel lighter"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>q1 · jan to mar 2026</em></span><span class="vrow v3"><i></i><em>no. 01</em></span></span></div>
+        <div class="cap"><strong>feel lighter</strong><small>01</small></div>
+        <p class="role">q1 · jan to mar 2026</p>
+      </a>      <a style="--tint:#d4d4cc" class="tile" href="work/q2-with-you.html">
+        <div class="shot"><img src="images/work/q2/cover.jpg" alt="with you"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>q2 · apr to jun 2026</em></span><span class="vrow v3"><i></i><em>no. 02</em></span></span></div>
+        <div class="cap"><strong>with you</strong><small>02</small></div>
+        <p class="role">q2 · apr to jun 2026</p>
+      </a>      <a style="--tint:#dfe2dc" class="tile" href="work/q3-we-believe-in-better.html">
+        <div class="shot"><img src="images/work/q3/cover.jpg" alt="we believe in better"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>q3 · jul to sep 2026</em></span><span class="vrow v3"><i></i><em>no. 03</em></span></span></div>
+        <div class="cap"><strong>we believe in better</strong><small>03</small></div>
+        <p class="role">q3 · jul to sep 2026</p>
+      </a>      <a style="--tint:#dadad5" class="tile" href="work/q4-holiday-campaign.html">
+        <div class="shot"><img src="images/work/q4/cover.jpg" alt="holiday campaign"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>q4 · oct to dec 2026</em></span><span class="vrow v3"><i></i><em>no. 04</em></span></span></div>
+        <div class="cap"><strong>holiday campaign</strong><small>04</small></div>
+        <p class="role">q4 · oct to dec 2026</p>
+      </a>
     </div>
 
-    <div class="info-grid bw">
-      <img src="images/portrait-2.jpg" alt="Second portrait or behind the scenes photo">
-      <div>
-        <p>Add a paragraph about the work outside the job. Photography, side projects, what you shoot.</p>
-        <p>Add a line like: Full portfolio available upon request.</p>
+    <div class="head"><h2><span class="sqs in" aria-hidden="true"><i></i><i></i><i></i></span>more work</h2><span class="count">4 collections</span></div>
+    <div class="grid">
+      <a style="--tint:#d6dbd5" class="tile" href="work/archive.html">
+        <div class="shot"><img src="images/work/archive/cover.jpg" alt="Social archive"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>2025 · organic social</em></span><span class="vrow v3"><i></i><em>no. 05</em></span></span></div>
+        <div class="cap"><strong>social archive</strong><small>05</small></div>
+        <p class="role">2025 · organic social</p>
+      </a>      <a style="--tint:#dedad5" class="tile" href="work/activations.html">
+        <div class="shot"><img src="images/work/act/cover.jpg" alt="Activations"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>in person · 2026</em></span><span class="vrow v3"><i></i><em>no. 06</em></span></span></div>
+        <div class="cap"><strong>activations</strong><small>06</small></div>
+        <p class="role">in person · 2026</p>
+      </a>      <a style="--tint:#e5e6e0" class="tile" href="work/photography.html">
+        <div class="shot"><img src="images/photography/cover.jpg" alt="Photography"><span class="veil"><span class="vrow v1"><i></i><em>view project</em></span><span class="vrow v2"><i></i><em>selected sets</em></span><span class="vrow v3"><i></i><em>no. 07</em></span></span></div>
+        <div class="cap"><strong>photography</strong><small>07</small></div>
+        <p class="role">selected sets</p>
+      </a>      <a class="tile soon" href="work/production.html">
+        <div class="shot"><span class="soon-art">coming soon &#10022;</span></div>
+        <div class="cap"><strong>production</strong><small>08</small></div>
+        <p class="role">coming soon</p>
+      </a>
+    </div>
+  </main>
+  <!-- ✎ FOOTER (same on every page). Replace YOUR_FORM_ID (Formspree) and your-handle (Instagram). Photo behind it is images/footer.jpg. Copyright line is near the bottom. -->
+  <footer class="foot" id="contact">
+    <div class="foot-photo foot-in">
+      <img src="images/footer.jpg" alt="Hazy green hills under a soft sky">
+      <div class="foot-inner">
+        <form class="foot-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <p class="foot-h">say hi &#10022;</p>
+          <input type="text" name="name" placeholder="your name" aria-label="Your name" autocomplete="name">
+          <input type="email" name="email" placeholder="your email" aria-label="Your email" autocomplete="email" required>
+          <textarea name="message" rows="2" placeholder="message" aria-label="Your message" required></textarea>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit">send &#10022;</button>
+          <p class="form-note" role="status" aria-live="polite"></p>
+        </form>
+        <nav class="foot-col" aria-label="Sitemap">
+          <p class="foot-h">sitemap</p>
+          <a href="index.html">home</a>
+          <a href="work.html">work</a>
+          <a href="work/photography.html">photography</a>
+          <a href="about.html">about</a>
+        </nav>
+        <nav class="foot-col" aria-label="Follow">
+          <p class="foot-h">follow</p>
+          <a href="https://www.instagram.com/your-handle">instagram</a>
+          <a href="https://www.linkedin.com/in/kerriengo56/">linkedin</a>
+        </nav>
       </div>
+      <p class="foot-c in-photo">&copy; 2026 kerrie ngo</p>
     </div>
-
-    <div class="experience">
-      <h2 class="label">What I Do</h2>
-      <ul class="skills">
-        <li>Social media</li>
-        <li>Community</li>
-        <li>Production assisting</li>
-        <li>Photography</li>
-      </ul>
-    </div>
-
-    <div class="experience">
-      <h2 class="label">Experience</h2>
-      <div>
-        <div class="row"><small>Role, 2025</small><span>Company or project</span></div>
-        <div class="row"><small>Role, 2024</small><span>Company or project</span></div>
-        <div class="row"><small>Role, 2023</small><span>Company or project</span></div>
-        <div class="row"><small>Role, 2022</small><span>Company or project</span></div>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>
-    <p class="name">YOUR NAME</p>
-    <p class="email italic">you@example.com</p>
-    <p class="social">
-      <a class="link" href="https://www.instagram.com/your-handle">Instagram</a>
-      <a class="link" href="https://www.linkedin.com/in/your-handle">LinkedIn</a>
-    </p>
   </footer>
+  <script src="form.js" defer></script>
 
 </body>
 </html>

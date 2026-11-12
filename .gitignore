@@ -1,0 +1,6 @@
+# Old versions of the site stay on this computer only. They are never uploaded.
+_old-versions/
+
+# Mac junk files
+.DS_Store
+**/.DS_Store

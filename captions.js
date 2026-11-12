@@ -1,0 +1,152 @@
+// =====================================================================
+// ✎ CAPTIONS (paste your post copy here)
+//
+//   1. Press Cmd+F and type a post's name (for example: ripple effect). Every line ends with its name.
+//   2. On that line, put your copy between the quote marks after  caption:
+//   3. Put hashtags between the quote marks after  tags:   Example:  "#feellighter #therapy"
+//   4. Press Cmd+S. Click that post on the site to see it.
+//
+//   Example of a finished line:
+//   "q1/february-feel-lighter-quote": { caption: "You are not the sum of what you overcame.", tags: "#feellighter" }, // feel lighter quote (1)
+//
+//   Rules that keep it working:
+//   - Keep the quote marks, the comma at the end of the line, and the curly brackets.
+//   - To start a new paragraph inside a caption, type \n  (backslash and the letter n).
+//   - Do NOT use a plain double quote inside your caption. Use the curly one: " or just write it with an apostrophe.
+//   - Do not change the part in quotes BEFORE the colon (like "q1/february-...").
+//   - Empty caption = the post shows "caption coming soon".
+// =====================================================================
+window.CAPTIONS = {
+  // ---- feel lighter (q1) ----
+  "q1/february-feel-lighter-quote": { caption: "", tags: "" }, // feel lighter quote (1)
+  "q1/february-one-love-social-impact-collab": { caption: "", tags: "" }, // one love social impact collab (4)
+  "q1/february-therapist-pov-vday-season": { caption: "", tags: "" }, // therapist pov: vday season (7)
+  "q1/february-therapist-pov-modern-day-dating": { caption: "", tags: "" }, // therapist pov- modern day dating (7)
+  "q1/february-therapist-take-leave-room-for-the-unexpected": { caption: "", tags: "" }, // therapist take: leave room for the unexpected (5)
+  "q1/february-therapist-take-sandwich-generation": { caption: "", tags: "" }, // therapist take sandwich generation (6)
+  "q1/february-therapist-take-societal-expectations-dating": { caption: "", tags: "" }, // therapist take-societal expectations dating (7)
+  "q1/february-therapist-take-family-caregiving-expectations": { caption: "", tags: "" }, // therapist take family caregiving expectations (6)
+  "q1/february-therapist-s-guide-dating-after-divorce": { caption: "", tags: "" }, // therapist's guide dating after divorce (6)
+  "q1/february-year-of-the-horse": { caption: "", tags: "" }, // year of the horse (5)
+  "q1/february-more-from-february": { caption: "", tags: "" }, // more from february (3)
+  "q1/january-2026-ins-and-outs": { caption: "", tags: "" }, // 2026 ins and outs (3)
+  "q1/january-awareness-without-action-instagram": { caption: "", tags: "" }, // awareness without action (instagram) (4)
+  "q1/january-awareness-without-action-linkedin": { caption: "", tags: "" }, // awareness without action (linkedin) (4)
+  "q1/january-ig-stories": { caption: "", tags: "" }, // ig stories (3)
+  "q1/january-invisible-wall-pinned-post-1": { caption: "", tags: "" }, // invisible wall: pinned post 1 (2)
+  "q1/january-predictable-relief": { caption: "", tags: "" }, // predictable relief (7)
+  "q1/january-rewrite-the-stigma": { caption: "", tags: "" }, // rewrite the stigma (8)
+  "q1/january-ripple-effect-of-therapy-instagram": { caption: "", tags: "" }, // ripple effect of therapy (instagram) (7)
+  "q1/january-ripple-effect-of-therapy-linkedin": { caption: "", tags: "" }, // ripple effect of therapy (linkedin) (7)
+  "q1/january-tvc": { caption: "", tags: "" }, // tvc (1)
+  "q1/january-therapy-as-a-form-of-control": { caption: "", tags: "" }, // therapy as a form of control (5)
+  "q1/march-ideal-self-exercise": { caption: "", tags: "" }, // ideal self exercise (5)
+  "q1/march-more-from-march": { caption: "", tags: "" }, // more from march (11)
+  "q1/q1-pinned-posts-feel-lighter-sonni-quote": { caption: "", tags: "" }, // feel lighter: sonni quote (2)
+  "q1/q1-pinned-posts-pinned-post-3": { caption: "", tags: "" }, // pinned post 3 (1)
+  "q1/q1-pinned-posts-the-invisible-wall": { caption: "", tags: "" }, // the invisible wall (8)
+  "q1/q1-pinned-posts-more-from-q1-pinned-posts": { caption: "", tags: "" }, // more from q1 pinned posts (2)
+
+  // ---- with you (q2) ----
+  "q2/april-behind-in-life-reel": { caption: "", tags: "" }, // behind in life reel (1)
+  "q2/april-inner-weirdness": { caption: "", tags: "" }, // inner weirdness (1)
+  "q2/april-pms-vs-pmdd": { caption: "", tags: "" }, // pms vs. pmdd (9)
+  "q2/april-self-sabotage": { caption: "", tags: "" }, // self-sabotage (1)
+  "q2/april-more-from-april": { caption: "", tags: "" }, // more from april (1)
+  "q2/june-david-yadush-reddit-ama-promo-carousel": { caption: "", tags: "" }, // david yadush: reddit ama: promo carousel (4)
+  "q2/june-david-yadush-reddit-ama-question-prompts": { caption: "", tags: "" }, // david yadush: reddit ama: question prompts (3)
+  "q2/june-humen-x-bh-collab-mmham-carousel": { caption: "", tags: "" }, // humen x bh collab mmham carousel (5)
+  "q2/june-humen-x-bh-collab-mmham-review-carousel": { caption: "", tags: "" }, // humen x bh collab mmham review carousel (4)
+  "q2/june-sos-recap-ig": { caption: "", tags: "" }, // sos recap ig (7)
+  "q2/june-the-okra-project-pride-month": { caption: "", tags: "" }, // the okra project: pride month (6)
+  "q2/june-soccer-explained-carousel": { caption: "", tags: "" }, // soccer explained carousel (5)
+  "q2/june-world-cup-posts": { caption: "", tags: "" }, // world cup posts (3)
+  "q2/may-cybersmile-collab": { caption: "", tags: "" }, // cybersmile collab (1)
+  "q2/may-self-sabotage-cycle-instagram": { caption: "", tags: "" }, // self-sabotage cycle (instagram) (2)
+  "q2/may-self-sabotage-cycle-linkedin": { caption: "", tags: "" }, // self-sabotage cycle (linkedin) (2)
+  "q2/q2-pinned-posts-empowerment": { caption: "", tags: "" }, // empowerment (5)
+  "q2/q2-pinned-posts-not-the-only-one": { caption: "", tags: "" }, // not the only one (5)
+  "q2/q2-pinned-posts-quiet-stress": { caption: "", tags: "" }, // quiet stress (5)
+
+  // ---- we believe in better (q3) ----
+  "q3/all-pieces-adhd-reddit-ama-promo-carousel": { caption: "", tags: "" }, // adhd reddit ama: promo carousel (4)
+  "q3/all-pieces-adhd-reddit-ama-question-prompts": { caption: "", tags: "" }, // adhd reddit ama: question prompts (3)
+  "q3/all-pieces-disability-pride-month": { caption: "", tags: "" }, // disability pride month (1)
+  "q3/all-pieces-kind-chic-trend": { caption: "", tags: "" }, // kind chic trend (6)
+  "q3/all-pieces-life-is-too-short": { caption: "", tags: "" }, // life is too short (1)
+  "q3/all-pieces-love-island-feel-your-feelings": { caption: "", tags: "" }, // love island feel your feelings (2)
+  "q3/all-pieces-march-of-dimes-social-impact": { caption: "", tags: "" }, // march of dimes social impact (5)
+  "q3/all-pieces-parenting-is-impossible": { caption: "", tags: "" }, // parenting is impossible (1)
+  "q3/all-pieces-shout-uk-x-bh": { caption: "", tags: "" }, // shout uk x bh (1)
+  "q3/all-pieces-sunshine-guilt": { caption: "", tags: "" }, // sunshine guilt (1)
+  "q3/all-pieces-touch-grass": { caption: "", tags: "" }, // touch grass (1)
+  "q3/all-pieces-world-perimenopause-day": { caption: "", tags: "" }, // world perimenopause day (6)
+  "q3/all-pieces-first-in-my-bloodline-trend": { caption: "", tags: "" }, // first in my bloodline trend (6)
+  "q3/all-pieces-summer-burnout": { caption: "", tags: "" }, // summer burnout (1)
+
+  // ---- holiday campaign (q4) ----
+  "q4/november-2026-shelter-to-soldier-carousel": { caption: "", tags: "" }, // shelter to soldier carousel (5)
+  "q4/november-2026-veterans-day-social-impact-carousel": { caption: "", tags: "" }, // veterans day social impact carousel (5)
+  "q4/november-2026-caregiver-events-flyer": { caption: "", tags: "" }, // caregiver events flyer (1)
+  "q4/november-2026-article-reshare": { caption: "", tags: "" }, // article reshare (2)
+
+  // ---- social archive (2025) ----
+  "archive/holidays-grief-awareness": { caption: "", tags: "" }, // grief awareness (7)
+  "archive/holidays-more-from-holidays": { caption: "", tags: "" }, // more from holidays (8)
+  "archive/ig-story-ig-story": { caption: "", tags: "" }, // ig story (14)
+  "archive/organic-to-paid-loneliness-caorusel-paid": { caption: "", tags: "" }, // loneliness caorusel paid (5)
+  "archive/organic-to-paid-organic-to-paid-r3": { caption: "", tags: "" }, // organic to paid, r3 (10)
+  "archive/organic-to-paid-more-from-organic-to-paid": { caption: "", tags: "" }, // more from organic to paid (1)
+  "archive/partnerships-miwt-bonus-ep-title-slide": { caption: "", tags: "" }, // miwt bonus ep title slide (2)
+  "archive/partnerships-miwt-story-promo": { caption: "", tags: "" }, // miwt story promo (3)
+  "archive/partnerships-wnba-ig-stories": { caption: "", tags: "" }, // wnba ig stories (6)
+  "archive/partnerships-more-from-partnerships": { caption: "", tags: "" }, // more from partnerships (6)
+  "archive/seasonal-messaging-anti-sad-routine": { caption: "", tags: "" }, // anti sad routine (8)
+  "archive/seasonal-messaging-brand-highlights-carousel": { caption: "", tags: "" }, // brand highlights carousel (5)
+  "archive/seasonal-messaging-hardest-days-sreela-quote": { caption: "", tags: "" }, // hardest days: sreela quote (2)
+  "archive/seasonal-messaging-holiday-boundaries": { caption: "", tags: "" }, // holiday boundaries (8)
+  "archive/seasonal-messaging-lessons-i-m-grateful-for": { caption: "", tags: "" }, // lessons i'm grateful for (8)
+  "archive/seasonal-messaging-sarah-quote-love-yourself": { caption: "", tags: "" }, // sarah quote: love yourself (4)
+  "archive/seasonal-messaging-social-impact-report-2025": { caption: "", tags: "" }, // social impact report 2025 (9)
+  "archive/seasonal-messaging-this-was-meant-to-find-you": { caption: "", tags: "" }, // this was meant to find you (7)
+  "archive/seasonal-messaging-what-if-we-stopped-waiting": { caption: "", tags: "" }, // what if we stopped waiting (5)
+  "archive/seasonal-messaging-your-worth-sarah-c-quote": { caption: "", tags: "" }, // your worth sarah c. quote (3)
+  "archive/seasonal-messaging-home-can-be-a-person": { caption: "", tags: "" }, // home can be a person (3)
+  "archive/seasonal-messaging-more-from-seasonal-messaging": { caption: "", tags: "" }, // more from seasonal messaging (3)
+  "archive/september-tentpole-31-days-of-therapists": { caption: "", tags: "" }, // 31 days of therapists (14)
+  "archive/september-tentpole-i-hope-my-therapist-knows": { caption: "", tags: "" }, // i hope my therapist knows (4)
+  "archive/september-tentpole-ig-stories-sept-tentpole": { caption: "", tags: "" }, // ig stories: sept tentpole (9)
+  "archive/september-tentpole-tloasg-trend": { caption: "", tags: "" }, // tloasg trend (6)
+  "archive/september-tentpole-taking-the-first-step-linkedin": { caption: "", tags: "" }, // taking the first step linkedin (8)
+  "archive/september-tentpole-the-right-fit-client-reviews": { caption: "", tags: "" }, // the right fit: client reviews (8)
+  "archive/september-tentpole-therapist-s-guide-reconnect-with-yourself": { caption: "", tags: "" }, // therapist's guide: reconnect with yourself (3)
+  "archive/september-tentpole-to-the-therapists-who": { caption: "", tags: "" }, // to the therapists who... (6)
+  "archive/september-tentpole-before-vs-after-linkedin": { caption: "", tags: "" }, // before vs. after: linkedin (5)
+  "archive/september-tentpole-therapist-testimonials-health-plans": { caption: "", tags: "" }, // therapist testimonials: health plans (6)
+  "archive/september-tentpole-more-from-september-tentpole": { caption: "", tags: "" }, // more from september tentpole (1)
+  "archive/spotify-wrapped-cultural-moments-spotify-wrapped-cultural-mo": { caption: "", tags: "" }, // spotify wrapped: cultural moments (instagram) (9)
+  "archive/spotify-wrapped-cultural-moments-more-from-spotify-wrapped-c": { caption: "", tags: "" }, // more from spotify wrapped: cultural moments (2)
+  "archive/spring-anxiety-adhd-anxiety": { caption: "", tags: "" }, // adhd + anxiety (14)
+  "archive/spring-anxiety-dear-march": { caption: "", tags: "" }, // dear march (7)
+  "archive/spring-anxiety-listening-to-my-body-trend": { caption: "", tags: "" }, // listening to my body trend (3)
+  "archive/spring-anxiety-micromanaging": { caption: "", tags: "" }, // micromanaging (6)
+  "archive/spring-anxiety-stress-management-li": { caption: "", tags: "" }, // stress management li (6)
+  "archive/spring-anxiety-work-friends": { caption: "", tags: "" }, // work friends (3)
+  "archive/spring-anxiety-more-from-spring-anxiety": { caption: "", tags: "" }, // more from spring anxiety (4)
+  "archive/state-of-stigma-gen-z-paradox-1x1": { caption: "", tags: "" }, // gen z paradox 1x1 (4)
+  "archive/summer-campaign-letters-i-ll-never-send": { caption: "", tags: "" }, // letters i'll never send (2)
+  "archive/summer-campaign-tsitp-2025": { caption: "", tags: "" }, // tsitp 2025 (9)
+  "archive/summer-campaign-more-from-summer-campaign": { caption: "", tags: "" }, // more from summer campaign (1)
+  "archive/social-impact-bh-scholarship-announcement": { caption: "", tags: "" }, // bh scholarship announcement (5)
+  "archive/social-impact-bh-x-mind4youth": { caption: "", tags: "" }, // bh x mind4youth (2)
+  "archive/social-impact-hfc-collab": { caption: "", tags: "" }, // hfc collab (9)
+  "archive/social-impact-lewis-capaldi-giving-tuesday": { caption: "", tags: "" }, // lewis capaldi giving tuesday (5)
+  "archive/social-impact-twloha-world-suicide-month": { caption: "", tags: "" }, // twloha: world suicide month (4)
+  "archive/social-impact-veterans-day-collab": { caption: "", tags: "" }, // veterans day collab (1)
+  "archive/pinned-post-mock-up-pinned-post-mock-up": { caption: "", tags: "" }, // pinned post mock up (6)
+
+  // ---- activations ----
+  "act/ny-liberty-x-betterhelp-creator-invite": { caption: "", tags: "" }, // creator invite (1)
+  "act/ny-liberty-x-betterhelp-game-day-the-setup": { caption: "", tags: "" }, // game day: the setup (19)
+  "act/ny-liberty-x-betterhelp-world-mental-health-day": { caption: "", tags: "" }, // world mental health day (2)
+};
