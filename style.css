@@ -1163,3 +1163,13 @@ body.film .main .box p.fine { color: var(--my-headline) !important; }
 .hl:hover i { width: 84px; }
 .hl span { font-size: 13px; letter-spacing: .05em; }
 .hl-col + .hl-col { padding-top: 6px; border-top: 1px solid rgba(252, 228, 193, .12); }
+
+
+/* ===== SECTION: WORK PAGE LABELS IN AMBER (the small typewriter caps match the skills labels on the resume page) =====
+   WHAT: counts, year labels, group labels, post details, experience dates and the campaign chips.
+   EDIT: change var(--c4) below to recolour them all. ===== */
+body.page-work .main .count, body.page-work .main .yl-count, body.page-work .main .yearlabel > span,
+body.page-work .main .hl-label, body.page-work .main .role, body.page-work .main .cap small,
+body.page-work .main .xrow small, body.page-work .main .more-btn, body.page-work .main .chipline span,
+body.page-work .main .more-btn .more-n { color: var(--c4) !important; }
+body.page-work .main .more-btn:hover, body.page-work .main .more-btn:focus-visible { color: #3a2f27 !important; }
