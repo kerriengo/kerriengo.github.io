@@ -863,3 +863,10 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .yearlabel > span:first-child::after { content: ""; display: inline-block; width: 46px; height: 1px; margin-left: 14px; vertical-align: middle; background: var(--c4); }
 .yearlabel::after { content: none; }
 .yl-count { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--my-muted); }
+
+/* ===== SECTION: "copy + design" credit tag on each campaign section (Work page) =====
+   EDIT: the words are in work.html (search credit). Delete a whole credit span to remove it from one section. ===== */
+.credit { color: var(--c4); border: 1px solid var(--c4); padding: 2px 8px; letter-spacing: .14em; }
+
+/* the "from my work at BetterHelp" line sits right under "a few numbers" */
+.box .fine.fine-top { margin: 4px 0 14px; }
