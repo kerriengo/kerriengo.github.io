@@ -42,6 +42,7 @@
   --my-cozy: block;            /* cozy 'now serving' line: block = show, none = hide */
   --my-cozy-flex: flex;        /* the steaming cup in the sidebar: flex = show, none = hide */
   --my-scroll: on;             /* gentle scroll effects (progress line, footer drift): on or off */
+  --my-stickers: block;        /* tape, stickers and labels: block = show, none = hide */
   --my-stamps: block;          /* orange date stamps on photos: block = show, none = hide */
 }
 
@@ -459,7 +460,7 @@ body { background: var(--bg); }
 
 /* ===== SECTION: About page (portrait, 'what i do' list, experience rows, tools chips) =====
    EDIT: portrait width = `.about-grid { grid-template-columns: 260px 1fr }` (change 260px). ===== */
-.about-grid { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; max-width: 900px; margin-bottom: 24px; }
+.about-grid { display: grid; grid-template-columns: minmax(220px, 280px) 1fr; gap: 24px; align-items: stretch; max-width: 900px; margin-bottom: 24px; }
 .about-grid .box { max-width: none; margin-bottom: 0; }
 .about-grid .box.flush .shot { aspect-ratio: 4 / 5; border-radius: 8px; }
 .main > .box { max-width: 900px; }
@@ -970,3 +971,37 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
    EDIT: line thickness = height below. Turn off: --my-scroll in MY SETTINGS. ===== */
 .read-line { position: fixed; top: var(--bar); left: 0; right: 0; height: 2px; z-index: 19; background: var(--c4); transform-origin: left; transform: scaleX(0); pointer-events: none; }
 .foot-photo img { will-change: transform; }
+
+
+/* ===== SECTION: VINTAGE POLAROID + STICKER TOUCHES =====
+   WHAT: your About photo is a polaroid that always matches the height of the text box beside it (any window size),
+         tape on the tiles, tiny stickers, and a printed-photo look on the photography page.
+   EDIT: turn the stickers and tape off with --my-stickers in MY SETTINGS. Sticker colours = the fill values in the url(...) lines. ===== */
+.polaroid-lg { position: relative; display: flex; flex-direction: column; margin: 0; padding: 14px 14px 0; background: #fff1dc; border-radius: 6px; box-shadow: 0 10px 24px rgba(20, 12, 6, .35); }
+.polaroid-lg .pl-photo { position: relative; flex: 1 1 auto; min-height: 300px; overflow: hidden; border-radius: 2px; background: var(--cream); }
+.polaroid-lg .pl-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: sepia(.12) saturate(.95) contrast(1.02); }
+.polaroid-lg figcaption { flex: none; padding: 14px 4px 16px; text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8f7b60; }
+.about-grid .polaroid-lg { max-width: none; }
+.tape { position: absolute; z-index: 2; top: -13px; left: 50%; width: 96px; height: 26px; transform: translateX(-50%) rotate(-3deg); background: rgba(200, 150, 79, .55); box-shadow: 0 1px 2px rgba(0, 0, 0, .2); display: var(--my-stickers, block); }
+@media (max-width: 860px) {
+  .polaroid-lg { max-width: 280px; }
+  .polaroid-lg .pl-photo { flex: none; min-height: 0; aspect-ratio: 4 / 5; }
+}
+
+.sticker { position: absolute; z-index: 3; width: 46px; height: 46px; background-repeat: no-repeat; background-size: contain; pointer-events: none; transform: rotate(var(--r, 10deg)); filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35)); display: var(--my-stickers, block); }
+.sticker.st-cam { right: -14px; bottom: 44px; --r: 9deg; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><g fill='%23fce4c1' stroke='%23fce4c1' stroke-width='7' stroke-linejoin='round'><rect x='6' y='15' width='36' height='25' rx='5'/><rect x='16' y='9' width='12' height='8' rx='2'/></g><rect x='6' y='15' width='36' height='25' rx='5' fill='%23b0735d'/><rect x='16' y='9' width='12' height='8' rx='2' fill='%23b0735d'/><circle cx='24' cy='28' r='8.5' fill='%23fce4c1'/><circle cx='24' cy='28' r='4.6' fill='%236f93a8'/><circle cx='37' cy='20' r='1.8' fill='%23c8964f'/></svg>"); }
+.intro { position: relative; }
+.intro::after { content: ""; position: absolute; right: -8px; top: -14px; width: 42px; height: 42px; transform: rotate(12deg); background-repeat: no-repeat; background-size: contain; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35)); display: var(--my-stickers, block); background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M24 3C26 16 32 22 45 24C32 26 26 32 24 45C22 32 16 26 3 24C16 22 22 16 24 3Z' fill='%23c8964f' stroke='%23fce4c1' stroke-width='4' stroke-linejoin='round' paint-order='stroke'/></svg>"); }
+.has-sticker { position: relative; }
+.sticker-label { position: absolute; top: 18px; right: 22px; transform: rotate(3deg); font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #3a2f27; background: #fce4c1; border: 1.5px dashed #b0735d; padding: 4px 10px; box-shadow: 0 2px 3px rgba(0, 0, 0, .3); display: var(--my-stickers, block); }
+
+/* tape on the tiles, like prints taped to a wall (very subtle) */
+.main .tile { position: relative; }
+.main .tile::before { content: ""; position: absolute; z-index: 2; top: -6px; left: 50%; width: 54px; height: 15px; transform: translateX(-50%) rotate(-2deg); background: rgba(252, 228, 193, .16); border-left: 1px solid rgba(252, 228, 193, .12); border-right: 1px solid rgba(252, 228, 193, .12); pointer-events: none; display: var(--my-stickers, block); }
+.main .tile:nth-child(3n+2)::before { transform: translateX(-50%) rotate(2.5deg); background: rgba(200, 150, 79, .2); }
+.main .tile:nth-child(3n)::before { transform: translateX(-50%) rotate(-4deg); background: rgba(111, 147, 168, .2); }
+
+/* photography: each frame reads like a printed photo, with a soft cream border */
+.frame img { border: 7px solid #fff1dc; border-radius: 2px; box-shadow: 0 6px 14px rgba(20, 12, 6, .4); filter: sepia(.08) contrast(1.02); }
+.frame { transform: rotate(var(--fr, 0deg)); }
+.frame:nth-child(4n+1) { --fr: -.5deg; } .frame:nth-child(4n+3) { --fr: .6deg; }
