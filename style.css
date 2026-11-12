@@ -21,7 +21,8 @@
 :root {
   /* ---- COLOURS (dark film theme) ---- */
   --my-page: #3a2f27;          /* page background (dark brown), also top bar and sidebar */
-  --my-card: #473a30;          /* cards, boxes, tiles, contact card */
+  --my-card: #473a30;          /* tiles and cards */
+  --my-box: #54463b;           /* the text boxes (numbers, experience, tools, campaign info). Lighter = easier to tell apart from the page */
   --my-text: #fce4c1;          /* main text (cream) */
   --my-headline: #fff1dc;      /* headlines and titles: the lighter cream from the popup's left panel */
   --my-muted: #d8c4a0;         /* smaller, quieter text (tan). Lighter = easier to read */
@@ -40,6 +41,7 @@
   /* ---- ON / OFF ---- */
   --my-cozy: block;            /* cozy 'now serving' line: block = show, none = hide */
   --my-cozy-flex: flex;        /* the steaming cup in the sidebar: flex = show, none = hide */
+  --my-scroll: on;             /* gentle scroll effects (fade up, progress line, footer drift): on or off */
   --my-stamps: block;          /* orange date stamps on photos: block = show, none = hide */
 }
 
@@ -744,7 +746,7 @@ body.film .lk:hover span { color: var(--my-text); }
 body.film .avatar { border-color: var(--my-page); }
 body.film .head h2, body.film .box h1, body.film .box h2 { color: var(--my-text); }
 body.film .count, body.film .back, body.film .box p.count, body.film .box p.soft { color: var(--my-muted); }
-body.film .box { background: var(--my-card); color: var(--my-text); border: 1px solid rgba(252, 228, 193, .14); box-shadow: none; }
+body.film .box { background: var(--my-box); color: var(--my-text); border: 1px solid rgba(252, 228, 193, .14); box-shadow: none; }
 body.film .box p { color: var(--my-soft); }
 body.film .next span { color: var(--my-muted); }
 body.film .next strong { color: var(--my-text); }
@@ -952,3 +954,23 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
   .steam i { opacity: .35; }
   .tile, .tile:hover, .tile:nth-child(even):hover, .cup svg, .frame img { transition: none; transform: none; }
 }
+
+/* ===== SECTION: the coffee cup stays pinned to the bottom of the sidebar while you scroll (every page) =====
+   EDIT: distance from the bottom = bottom below. On phones it sits in the bottom-right corner. ===== */
+.cup { position: fixed; z-index: 15; bottom: 14px; left: calc(max(var(--side), 250px) / 2); transform: translateX(-50%); width: auto; margin: 0; }
+@media (max-width: 860px) {
+  .cup { left: auto; right: 14px; bottom: 14px; transform: none; padding: 8px 10px; background: var(--my-page); border: 1px solid rgba(252, 228, 193, .22); border-radius: 12px; }
+  .cup-note { position: absolute; right: 0; bottom: 100%; margin-bottom: 6px; white-space: nowrap; background: var(--my-page); border-radius: 8px; padding: 2px 8px; }
+  .cup-note:empty { display: none; }
+}
+
+
+/* ===== SECTION: GENTLE SCROLL EFFECTS (from scroll.js) =====
+   WHAT: tiles and boxes fade up as you scroll, an amber progress line under the top bar, a slow footer photo drift.
+   EDIT: speed = the .7s below. Distance they travel = the 22px. Turn off: --my-scroll in MY SETTINGS. ===== */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in-view { opacity: 1; transform: none; }
+.tile.reveal.in-view:hover { transform: translateY(-4px) rotate(-.7deg); }
+.tile:nth-child(even).reveal.in-view:hover { transform: translateY(-4px) rotate(.7deg); }
+.read-line { position: fixed; top: var(--bar); left: 0; right: 0; height: 2px; z-index: 19; background: var(--c4); transform-origin: left; transform: scaleX(0); pointer-events: none; }
+.foot-photo img { will-change: transform; }
