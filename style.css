@@ -1135,3 +1135,6 @@ body.film .bnav span { font-size: 10.5px; letter-spacing: .14em; }
 .main .box > p:last-child, .main .box > ul:last-child, .main .box > .dolist:last-child { margin-bottom: 0; }
 .chipline { margin: 12px 0 -8px; }
 body.film .box .fine { letter-spacing: .06em; }
+
+/* the line under "what i do" uses the same typewriter font as the small notes (like "every platform counts engagement...") */
+body.film .main .box p.do-note { font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; line-height: 1.7; }
