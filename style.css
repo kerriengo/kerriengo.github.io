@@ -42,6 +42,14 @@
   --my-cozy: block;            /* cozy 'now serving' line: block = show, none = hide */
   --my-cozy-flex: flex;        /* the steaming cup in the sidebar: flex = show, none = hide */
   --my-scroll: on;             /* gentle scroll effects (progress line, footer drift): on or off */
+  /* ---- TEXT SIZES (the type scale: change a number and every matching heading or label changes) ---- */
+  --t-h1: 26px;                /* page titles (Georgia) */
+  --t-h2: 15px;                /* section headings (Georgia, wide spacing) */
+  --t-tile: 14.5px;            /* tile and post titles (Georgia) */
+  --t-body: 15px;              /* paragraphs (ABeeZee) */
+  --t-meta: 12px;              /* counts, dates, year labels (Courier, caps) */
+  --t-label: 11px;             /* small labels and notes (Courier, caps). Nothing on the site is smaller except hover text */
+
   --my-stickers: block;        /* tape, stickers and labels: block = show, none = hide */
   --my-stickers-inline: inline-block; /* the small doodles beside headings (phone, clapperboard): inline-block = show, none = hide */
   --my-stamps: block;          /* orange date stamps on photos: block = show, none = hide */
@@ -1090,3 +1098,40 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .skill-row:last-child { border-bottom: 0; }
 .skill-label { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--c4); padding-top: 3px; }
 @media (max-width: 700px) { .skill-row { grid-template-columns: 1fr; } }
+
+
+/* ===== SECTION: TYPE SCALE (final pass: one clear hierarchy) =====
+   HIERARCHY: page title (Georgia, big) > section heading (Georgia, wide spacing) > tile title (Georgia) > paragraph (ABeeZee)
+              > meta (Courier, caps, 12px) > label (Courier, caps, 11px).
+   EDIT: change the --t-... numbers in MY SETTINGS at the top. This block only reads them. ===== */
+body.film .main .head h2, body.film .main .box h2, body.film .side-name { font-size: var(--t-h2); letter-spacing: .2em; }
+body.film .main .box h1 { font-size: var(--t-h1); letter-spacing: .1em; line-height: 1.15; }
+body.film .cap strong { font-size: var(--t-tile); letter-spacing: .1em; line-height: 1.3; }
+body.film .main .box p, body.film .skill-row, body.film .rb li { font-size: var(--t-body); line-height: 1.6; }
+body.film .count, body.film .yl-count, body.film .yearlabel, body.film .job-date, body.film .job-meta, body.film .topbar nav { font-size: var(--t-meta); letter-spacing: .16em; }
+body.film .role, body.film .cap small, body.film .facts dt, body.film .xrow small, body.film .hl-label, body.film .skill-label, body.film .box .fine, body.film .stats span { font-size: var(--t-label); letter-spacing: .14em; }
+body.film .tagline, body.film .lk span, body.film .cup-note { font-size: var(--t-label); }
+body.film .bnav span { font-size: 10.5px; letter-spacing: .14em; }
+.vrow em { font-size: 10px; }
+.job-title, .xrow span, .dolist li { font-size: 20px; }
+.hl b { font-size: 30px; }
+.facts dd { font-size: var(--t-body); }
+
+/* ===== SECTION: EVEN SPACING (final pass: one rhythm between headings, rows and boxes) =====
+   EDIT: the three px values below. Bigger = more air. ===== */
+.main .head { margin: 0 0 22px; }
+.main .box + .head, .main .grid + .head, .main .more-row + .head, .main .film-gallery + .head { margin-top: 52px; }
+.main .box { margin-bottom: 22px; }
+.main .grid, .main .grid.big { margin-bottom: 56px; }
+.main .yearlabel { margin: 36px 0 18px; }
+.main > .head:first-child, .main > .yearlabel:first-child { margin-top: 0; }
+
+/* tile title and its number never touch: the number keeps its own space */
+.cap { gap: 14px; }
+.cap strong { flex: 1 1 auto; min-width: 0; }
+.cap small { flex: none; }
+
+/* balance: boxes end with the same padding as they start, small notes read as notes */
+.main .box > p:last-child, .main .box > ul:last-child, .main .box > .dolist:last-child { margin-bottom: 0; }
+.chipline { margin: 12px 0 -8px; }
+body.film .box .fine { letter-spacing: .06em; }

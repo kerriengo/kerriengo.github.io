@@ -85,7 +85,6 @@ window.CAPTIONS = {
   // ---- holiday campaign (q4) ----
   "q4/november-2026-shelter-to-soldier-carousel": { caption: "", tags: "" }, // shelter to soldier carousel (5)
   "q4/november-2026-veterans-day-social-impact-carousel": { caption: "Every step makes a difference. 🐾💚\n\nTo celebrate Veterans Day, we’re supporting @sheltertosoldier, a nonprofit that’s “Saving Lives, Two at a Time” by giving rescue dogs a second chance—training them and pairing them as psychiatric service dogs for veterans.\n\nOn Saturday, 11/7, they’re hosting their Salute to Paws 5K in Encinitas, CA. For every registration, we’ll make 10 hours of therapy available to veterans.\n\n📍 Near San Diego? Sign up for the 5K.\n\n🫂 Can't make it? You can still support the cause by donating directly to Shelter to Soldier.", tags: "" }, // veterans day social impact carousel (5)
-  "q4/november-2026-caregiver-events-flyer": { caption: "", tags: "" }, // caregiver events flyer (1)
   "q4/november-2026-article-reshare": { caption: "", tags: "" }, // article reshare (2)
 
   // ---- social archive (2025) ----
@@ -123,7 +122,6 @@ window.CAPTIONS = {
   "archive/september-tentpole-therapist-testimonials-health-plans": { caption: "", tags: "" }, // therapist testimonials: health plans (6)
   "archive/september-tentpole-more-from-september-tentpole": { caption: "", tags: "" }, // more from september tentpole (1)
   "archive/spotify-wrapped-cultural-moments-spotify-wrapped-cultural-mo": { caption: "", tags: "" }, // spotify wrapped: cultural moments (instagram) (9)
-  "archive/spotify-wrapped-cultural-moments-more-from-spotify-wrapped-c": { caption: "", tags: "" }, // more from spotify wrapped: cultural moments (2)
   "archive/spring-anxiety-adhd-anxiety": { caption: "", tags: "" }, // adhd + anxiety (14)
   "archive/spring-anxiety-dear-march": { caption: "", tags: "" }, // dear march (7)
   "archive/spring-anxiety-listening-to-my-body-trend": { caption: "Fight-or-flight mode was designed to save us from real threats – like being chased by a predator. But in modern life, our nervous system can misinterpret everyday stressors (like an unread text or an upcoming social gathering) as danger, triggering the same physiological response: increased heart rate, tense muscles, and avoidance.\n\nThe good news? Our brains are adaptable. By recognizing these responses for what they are, we can practice regulation techniques—like deep breathing, mindfulness, and reframing our thoughts—to step out of survival mode.\n\nHave you ever noticed your body reacting this way to non-threatening situations? Comment below ⬇️", tags: "" }, // listening to my body trend (3)
