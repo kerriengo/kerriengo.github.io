@@ -1,7 +1,7 @@
 // ✎ HOW TO EDIT THIS FILE (you rarely need to)
 //   Every doodle on the site is drawn here in ONE style: flat colour, thick cream outline, soft shadow.
 //   Doodles: coffee cup (sidebar), heart (footer, click it), camera (About, click it), phone (Work),
-//   paper plane (campaign pages), film canister + Fujifilm-style camera (Photography), clapperboard (Production).
+//   paper plane (campaign pages), Fujifilm-style camera (Photography), clapperboard (Production).
 //   To change a doodle's colours, change the #hex colours inside its drawing below. Save with Cmd+S.
 //   To hide all stickers and doodles: in style.css, search MY SETTINGS and set --my-stickers to none.
 (function () {
@@ -112,16 +112,14 @@
     if (b) { b.classList.add('has-doodle'); b.appendChild(el('span', 'doodle plane', D.plane)); }
   }
 
-  // ---------- 6. film canister + Fujifilm-style camera on Photography ----------
+  // ---------- 6. Fujifilm-style camera in the lower right of the Photography intro box (click for a shutter flash) ----------
   if (isPhoto) {
-    var ph1 = document.querySelector('.main .box h1');
-    if (ph1) {
-      var fb = el('button', 'doodle inline-doodle fuji-cam', D.fuji, { type: 'button', 'aria-label': 'click the shutter' });
-      ph1.appendChild(fb);
+    var pb = document.querySelector('.has-sticker');
+    if (pb) {
+      var fb = el('button', 'doodle fuji-cam', D.fuji, { type: 'button', 'aria-label': 'click the shutter' });
+      pb.appendChild(fb);
       fb.addEventListener('click', function () { fb.classList.add('click'); setTimeout(function () { fb.classList.remove('click'); }, 350); });
     }
-    var pb = document.querySelector('.has-sticker');
-    if (pb) pb.appendChild(el('span', 'doodle canister', D.canister));
   }
 
   // ---------- 7. clapperboard on Production (click it) ----------

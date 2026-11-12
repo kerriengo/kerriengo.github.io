@@ -36,6 +36,7 @@ Tip: every file has labels that start with the pencil symbol **✎**. Press **Cm
 index.html            Home page
 work.html             Work page (numbers, experience, tools, then EVERY campaign from Sept 2025 on, in sections)
 about.html            About page
+resume.html           Resume page (profile, experience, skills, education)
 work/
   y25-september-tentpole.html   Fall 2025 campaign page
   y25-social-impact.html        Fall 2025 social impact page
@@ -87,6 +88,7 @@ _old-versions/        Old drafts. Stays on my computer. Never uploaded.
 | Turn off the film grain | `style.css` | `body::after` then change `opacity: .06` to `opacity: 0` |
 | Home page intro sentence | `index.html` | `HOME INTRO` |
 | About text | `about.html` | `✎ ABOUT` |
+| Resume (jobs, bullets, skills) | `resume.html` | `✎ EXPERIENCE` / `✎ SKILLS` |
 | Big numbers, experience, tools | `work.html` | `BIG NUMBERS`, `EXPERIENCE`, `TOOLS` |
 | A campaign's brief, approach, result | the file in `work/` | `BRIEF / APPROACH` |
 | A post's title | the file in `work/` | `POST CARDS` |
