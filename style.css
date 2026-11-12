@@ -1152,7 +1152,7 @@ body.film .main .box p.job-meta { font-family: var(--mono); font-size: var(--t-l
 body.film .main .box p.fine { color: var(--my-headline) !important; }
 
 
-/* ===== SECTION: calmer numbers (one column: growth first, then reach + scale; two colours, one per group) =====
+/* ===== SECTION: calmer numbers (one column: growth first, then reach + scale; each row keeps its own colour) =====
    EDIT: growth colour = amber values, reach colour = blue values below. Row spacing = padding on .hl. ===== */
 .hls { grid-template-columns: 1fr; gap: 26px; margin: 14px 0 12px; }
 .hl-col { display: flex; flex-direction: column; }
@@ -1162,8 +1162,4 @@ body.film .main .box p.fine { color: var(--my-headline) !important; }
 .hl i { width: 48px; }
 .hl:hover i { width: 84px; }
 .hl span { font-size: 13px; letter-spacing: .05em; }
-.hl.h1 b, .hl.h2 b, .hl.h3 b { color: #dcab62; }
-.hl.h1 i, .hl.h2 i, .hl.h3 i { background: var(--c4); border-color: var(--c4); }
-.hl.h4 b, .hl.h5 b, .hl.h6 b { color: #96b8cc; }
-.hl.h4 i, .hl.h5 i, .hl.h6 i { background: var(--c1); border-color: var(--c1); }
 .hl-col + .hl-col { padding-top: 6px; border-top: 1px solid rgba(252, 228, 193, .12); }
