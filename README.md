@@ -34,14 +34,17 @@ Tip: every file has labels that start with the pencil symbol **✎**. Press **Cm
 
 ```
 index.html            Home page
-work.html             Work page (numbers, experience, tools, all tiles)
+work.html             Work page (numbers, experience, tools, then EVERY campaign from Sept 2025 on, in sections)
 about.html            About page
 work/
+  y25-september-tentpole.html   Fall 2025 campaign page
+  y25-social-impact.html        Fall 2025 social impact page
+  y25-seasonal-messaging.html   Holiday 2025 campaign page
   q1-feel-lighter.html        Q1 campaign page + its posts
   q2-with-you.html            Q2 campaign page
   q3-we-believe-in-better.html  Q3 campaign page
   q4-holiday-campaign.html    Q4 campaign page
-  archive.html                Social archive (2025)
+  archive.html                Social archive (2025 posts before the fall campaigns)
   activations.html            In-person events
   photography.html            Photo gallery
   production.html             "Coming soon" page
@@ -54,6 +57,13 @@ README.md             This guide
 .gitignore            Tells GitHub what NOT to upload
 _old-versions/        Old drafts. Stays on my computer. Never uploaded.
 ```
+
+### How the Work page is built (read this before editing posts)
+
+- The **home page** shows one tile per campaign (2025 row, 2026 row).
+- The **Work page** shows every post from **September 2025 on**, in one section per campaign, oldest first. Each section has a "view campaign" link.
+- The **Social archive** holds the earlier 2025 posts (before September 2025).
+- Every post card appears in **two places**: on its campaign page and on the Work page. If you change a post's title or remove it, do it in **both** files. Use Cmd + Shift + H (find and replace in all files) to change a title everywhere at once.
 
 ---
 

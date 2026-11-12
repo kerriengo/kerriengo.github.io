@@ -845,3 +845,8 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 
 /* polaroid photos: keep faces in frame when a tall photo is cropped to 4:5 */
 .pola img { object-position: center 40%; }
+
+/* ===== SECTION: small year labels (2025 / 2026) above tile rows and on the Work page =====
+   EDIT: size and spacing are in this rule. ===== */
+.yearlabel { margin: 30px 0 18px; font-family: var(--mono); font-size: 12px; letter-spacing: .3em; color: var(--my-muted); }
+.yearlabel::after { content: ""; display: inline-block; width: 46px; height: 1px; margin-left: 14px; vertical-align: middle; background: var(--c4); }
