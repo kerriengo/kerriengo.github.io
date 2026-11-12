@@ -879,3 +879,12 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .more-btn b { font-weight: 400; font-size: 14px; display: inline-block; transition: transform .25s ease; }
 .more-btn:hover, .more-btn:focus-visible { background: var(--c4); color: #3a2f27; outline: none; }
 .more-btn:hover b, .more-btn:focus-visible b { transform: translateX(4px); }
+
+/* campaign chips alternate colours like the tools tags: blue, brick, olive, amber (then repeat) */
+.more-btn.tone-blue  { border-color: var(--c1); }
+.more-btn.tone-brick { border-color: var(--c5); }
+.more-btn.tone-olive { border-color: var(--c8); }
+.more-btn.tone-amber { border-color: var(--c4); }
+.more-btn.tone-blue:hover,  .more-btn.tone-blue:focus-visible  { background: var(--c1); border-color: var(--c1); }
+.more-btn.tone-brick:hover, .more-btn.tone-brick:focus-visible { background: var(--c5); border-color: var(--c5); }
+.more-btn.tone-olive:hover, .more-btn.tone-olive:focus-visible { background: var(--c8); border-color: var(--c8); color: #fce4c1; }
