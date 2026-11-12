@@ -1,7 +1,7 @@
 // ✎ HOW TO EDIT THIS FILE (you rarely need to)
 //   Every doodle on the site is drawn here in ONE style: flat colour, thick cream outline, soft shadow.
-//   Doodles: coffee cup (sidebar), heart (footer, click it), camera (About, click it), pencil (Work),
-//   paper plane (campaign pages), film canister (Photography), clapperboard (Production).
+//   Doodles: coffee cup (sidebar), heart (footer, click it), camera (About, click it), phone (Work),
+//   paper plane (campaign pages), film canister + Fujifilm-style camera (Photography), clapperboard (Production).
 //   To change a doodle's colours, change the #hex colours inside its drawing below. Save with Cmd+S.
 //   To hide all stickers and doodles: in style.css, search MY SETTINGS and set --my-stickers to none.
 (function () {
@@ -24,10 +24,18 @@
     heart: svg('0 0 48 48',
       '<path d="M24 41C8 30 5 21 5 15C5 9 10 5 15 5C19 5 22 7 24 11C26 7 29 5 33 5C38 5 43 9 43 15C43 21 40 30 24 41Z" fill="#b4684a" ' + O + '/>' +
       '<path d="M13 15q2-5 7-4" fill="none" stroke="#fce4c1" stroke-width="2.6" stroke-linecap="round"/>'),
-    pencil: svg('0 0 48 48',
-      '<g transform="rotate(-40 24 24)" ' + O + '><rect x="19" y="4" width="10" height="30" rx="1.5" fill="#c8964f"/>' +
-      '<path d="M19 34h10l-5 10z" fill="#fce4c1"/></g>' +
-      '<g transform="rotate(-40 24 24)"><rect x="19" y="4" width="10" height="6" fill="#b4684a"/><path d="M22 40h4l-2 4z" fill="#3a2f27"/></g>'),
+    phone: svg('0 0 40 52',
+      '<g ' + O + '><rect x="7" y="3" width="26" height="46" rx="6" fill="#3a2f27"/></g>' +
+      '<rect x="11" y="10" width="18" height="30" rx="2" fill="#6f93a8"/>' +
+      '<path transform="translate(0 -2)" d="M20 33c-4-3-5-5-5-6.5a2.6 2.6 0 0 1 5-.8a2.6 2.6 0 0 1 5 .8c0 1.5-1 3.5-5 6.5z" fill="#fce4c1"/>' +
+      '<rect x="16" y="5.5" width="8" height="2" rx="1" fill="#fce4c1"/><rect x="16" y="43.5" width="8" height="2" rx="1" fill="#fce4c1"/>'),
+    fuji: svg('0 0 72 54',
+      '<g ' + O + '><rect x="4" y="13" width="64" height="35" rx="5" fill="#3a2f27"/></g>' +
+      '<rect x="4" y="13" width="64" height="13" rx="5" fill="#d4b491"/><rect x="4" y="21" width="64" height="5" fill="#d4b491"/>' +
+      '<rect x="14" y="6" width="11" height="8" rx="1.5" fill="#c8964f"/><rect x="45" y="7" width="8" height="7" rx="1" fill="#b0735d"/><circle cx="60" cy="9" r="3.4" fill="#fce4c1"/>' +
+      '<rect x="9" y="16" width="15" height="6" rx="1.5" fill="#6f93a8"/>' +
+      '<circle cx="39" cy="35" r="14" fill="#d4b491" stroke="#fce4c1" stroke-width="2.4"/><circle cx="39" cy="35" r="10" fill="#3a2f27"/>' +
+      '<circle class="lens-in" cx="39" cy="35" r="6.4" fill="#6f93a8"/><circle cx="36.4" cy="32.4" r="1.9" fill="#fce4c1"/>'),
     plane: svg('0 0 56 48',
       '<path d="M4 22L52 4L36 44L26 30Z" fill="#95a882" ' + O + '/>' +
       '<path d="M26 30L52 4M26 30L24 42L32 36" fill="none" stroke="#fce4c1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'),
@@ -92,10 +100,10 @@
     cam.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); snap(); } });
   }
 
-  // ---------- 4. pencil by the Work heading (not interactive) ----------
+  // ---------- 4. phone by the Work heading (not interactive) ----------
   if (onWork) {
     var wh = document.querySelector('.main .head h2');
-    if (wh) wh.appendChild(el('span', 'doodle inline-doodle pencil', D.pencil));
+    if (wh) wh.appendChild(el('span', 'doodle inline-doodle phone-doodle', D.phone));
   }
 
   // ---------- 5. paper plane on campaign pages (not interactive) ----------
@@ -104,8 +112,14 @@
     if (b) { b.classList.add('has-doodle'); b.appendChild(el('span', 'doodle plane', D.plane)); }
   }
 
-  // ---------- 6. film canister on Photography (wiggles on hover) ----------
+  // ---------- 6. film canister + Fujifilm-style camera on Photography ----------
   if (isPhoto) {
+    var ph1 = document.querySelector('.main .box h1');
+    if (ph1) {
+      var fb = el('button', 'doodle inline-doodle fuji-cam', D.fuji, { type: 'button', 'aria-label': 'click the shutter' });
+      ph1.appendChild(fb);
+      fb.addEventListener('click', function () { fb.classList.add('click'); setTimeout(function () { fb.classList.remove('click'); }, 350); });
+    }
     var pb = document.querySelector('.has-sticker');
     if (pb) pb.appendChild(el('span', 'doodle canister', D.canister));
   }

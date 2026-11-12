@@ -43,6 +43,7 @@
   --my-cozy-flex: flex;        /* the steaming cup in the sidebar: flex = show, none = hide */
   --my-scroll: on;             /* gentle scroll effects (progress line, footer drift): on or off */
   --my-stickers: block;        /* tape, stickers and labels: block = show, none = hide */
+  --my-stickers-inline: inline-block; /* the small doodles beside headings (phone, clapperboard): inline-block = show, none = hide */
   --my-stamps: block;          /* orange date stamps on photos: block = show, none = hide */
 }
 
@@ -1002,7 +1003,7 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 
 
 /* ===== SECTION: DOODLES (all drawn in one style: flat colour, cream outline, soft shadow; from doodles.js) =====
-   WHAT: the coffee cup, the sparkles by your bio, the heart, camera, pencil, plane, film canister and clapperboard.
+   WHAT: the coffee cup, the sparkles by your bio, the heart, camera, phone, plane, film canister and clapperboard.
    EDIT: sizes = the width values below. Hide them all: --my-stickers in MY SETTINGS. Colours live in doodles.js. ===== */
 .doodle-svg { display: block; overflow: visible; }
 .doodle { display: var(--my-stickers, block); filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35)); }
@@ -1015,7 +1016,7 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .cup.pour .st { animation-duration: 1.1s; }
 
 .intro::after { animation: twinkle 3.6s ease-in-out infinite; --tw: 12deg; }
-.intro::before { content: ""; position: absolute; left: -36px; top: 8px; width: 24px; height: 24px; transform: rotate(-10deg); background-repeat: no-repeat; background-size: contain; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35)); display: var(--my-stickers, block); animation: twinkle 3.6s ease-in-out 1.4s infinite; --tw: -10deg; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M24 3C26 16 32 22 45 24C32 26 26 32 24 45C22 32 16 26 3 24C16 22 22 16 24 3Z' fill='%23c8964f' stroke='%23fce4c1' stroke-width='4' stroke-linejoin='round' paint-order='stroke'/></svg>"); }
+.intro::before { content: ""; position: absolute; left: -36px; bottom: 2px; width: 24px; height: 24px; transform: rotate(-10deg); background-repeat: no-repeat; background-size: contain; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .35)); display: var(--my-stickers, block); animation: twinkle 3.6s ease-in-out 1.4s infinite; --tw: -10deg; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M24 3C26 16 32 22 45 24C32 26 26 32 24 45C22 32 16 26 3 24C16 22 22 16 24 3Z' fill='%23c8964f' stroke='%23fce4c1' stroke-width='4' stroke-linejoin='round' paint-order='stroke'/></svg>"); }
 @keyframes twinkle { 0%, 100% { transform: rotate(var(--tw)) scale(1); opacity: 1; } 50% { transform: rotate(calc(var(--tw) + 16deg)) scale(.78); opacity: .7; } }
 
 .heart-btn { display: inline-block; width: 28px; height: 28px; margin-left: 10px; padding: 0; vertical-align: middle; background: none; border: 0; cursor: pointer; transition: transform .25s ease; }
@@ -1029,8 +1030,8 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .polaroid-lg.snap .pl-photo::after { animation: flash .6s ease-out; }
 @keyframes flash { 0% { opacity: .9; } 100% { opacity: 0; } }
 
-.inline-doodle { display: var(--my-stickers, inline-block); width: 34px; height: 34px; margin-left: 12px; vertical-align: middle; }
-.pencil { transform: rotate(8deg); }
+.inline-doodle { display: var(--my-stickers-inline, inline-block); width: 34px; height: 34px; margin-left: 12px; vertical-align: middle; }
+.phone-doodle { width: 28px; height: 38px; transform: rotate(8deg); }
 .has-doodle { position: relative; }
 .doodle.plane { position: absolute; top: -20px; right: 28px; width: 64px; transform: rotate(-8deg); pointer-events: none; }
 .doodle.canister { position: absolute; right: 30px; bottom: -22px; width: 36px; transform: rotate(8deg); transition: transform .3s ease; }
@@ -1050,3 +1051,8 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .foot-form button.heart-btn:hover svg, .foot-form button.heart-btn:focus-visible svg { transform: scale(1.18) rotate(-6deg); }
 .heart-btn svg { transition: transform .25s ease; }
 .foot-form .foot-h { display: flex; align-items: center; }
+
+.fuji-cam { width: 60px; height: 45px; margin-left: 14px; padding: 0; background: none; border: 0; cursor: pointer; transition: transform .25s ease; }
+.fuji-cam:hover, .fuji-cam:focus-visible { transform: rotate(-4deg) scale(1.08); outline: none; }
+.fuji-cam .lens-in { transition: fill .15s ease; }
+.fuji-cam.click .lens-in { fill: #fce4c1; }
