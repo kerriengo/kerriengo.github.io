@@ -888,3 +888,15 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .more-btn.tone-blue:hover,  .more-btn.tone-blue:focus-visible  { background: var(--c1); border-color: var(--c1); }
 .more-btn.tone-brick:hover, .more-btn.tone-brick:focus-visible { background: var(--c5); border-color: var(--c5); }
 .more-btn.tone-olive:hover, .more-btn.tone-olive:focus-visible { background: var(--c8); border-color: var(--c8); color: #fce4c1; }
+
+/* ===== SECTION: reach and engagement numbers (5 platforms, 3 across) =====
+   EDIT: numbers are in work.html (search reach and engagement). Number size = .stats b above. ===== */
+.stats.stats-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stats.stats-3 div:nth-child(5) b { color: #d4917a; }
+.stats.stats-3 div:nth-child(1) b { color: #dcab62; }
+.stats.stats-3 div:nth-child(2) b { color: #d4917a; }
+.stats.stats-3 div:nth-child(3) b { color: #96b8cc; }
+.stats.stats-3 div:nth-child(4) b { color: #b4c5a0; }
+.stats.stats-3 div:nth-child(5) b { color: #dcab62; }
+@media (max-width: 860px) { .stats.stats-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .stats.stats-3 { grid-template-columns: 1fr; } }
