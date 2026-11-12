@@ -41,7 +41,7 @@
   /* ---- ON / OFF ---- */
   --my-cozy: block;            /* cozy 'now serving' line: block = show, none = hide */
   --my-cozy-flex: flex;        /* the steaming cup in the sidebar: flex = show, none = hide */
-  --my-scroll: on;             /* gentle scroll effects (fade up, progress line, footer drift): on or off */
+  --my-scroll: on;             /* gentle scroll effects (progress line, footer drift): on or off */
   --my-stamps: block;          /* orange date stamps on photos: block = show, none = hide */
 }
 
@@ -966,11 +966,7 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 
 
 /* ===== SECTION: GENTLE SCROLL EFFECTS (from scroll.js) =====
-   WHAT: tiles and boxes fade up as you scroll, an amber progress line under the top bar, a slow footer photo drift.
-   EDIT: speed = the .7s below. Distance they travel = the 22px. Turn off: --my-scroll in MY SETTINGS. ===== */
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.in-view { opacity: 1; transform: none; }
-.tile.reveal.in-view:hover { transform: translateY(-4px) rotate(-.7deg); }
-.tile:nth-child(even).reveal.in-view:hover { transform: translateY(-4px) rotate(.7deg); }
+   WHAT: an amber progress line under the top bar and a slow footer photo drift.
+   EDIT: line thickness = height below. Turn off: --my-scroll in MY SETTINGS. ===== */
 .read-line { position: fixed; top: var(--bar); left: 0; right: 0; height: 2px; z-index: 19; background: var(--c4); transform-origin: left; transform: scaleX(0); pointer-events: none; }
 .foot-photo img { will-change: transform; }
