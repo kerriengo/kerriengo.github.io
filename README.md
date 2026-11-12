@@ -110,9 +110,8 @@ Pictures waiting for you:
 
 | File | Where it shows |
 |---|---|
-| `images/avatar.jpg` | the round photo in the sidebar and popup |
+| `images/avatar.jpg` | the round photo in the sidebar |
 | `images/portrait.jpg` | About page main photo |
-| `images/about-1.jpg`, `images/about-2.jpg` | the two polaroids on About |
 | `images/footer.jpg` | the big photo behind the footer (already set) |
 
 Keep each photo under 1 MB so the site loads fast. Remove location data from any photo you add yourself (Mac: open it in Preview → Tools → Show Inspector → GPS tab → Remove Location Info).
@@ -281,7 +280,7 @@ If something breaks: **Cmd + Z**, **Cmd + S**.
 ### 9.1 Before you publish: checklist
 - [ ] `YOUR_FORM_ID` replaced (section 6)
 - [ ] `your-handle` replaced with your Instagram name (section 4)
-- [x] Photos of me are added: `avatar.jpg`, `portrait.jpg`, `about-1.jpg`, `about-2.jpg`
+- [x] Photos of me are added: `avatar.jpg`, `portrait.jpg`
 - [ ] Search `Draft:` and replace every draft sentence on the campaign pages with your words
 - [ ] Captions added in `captions.js` (or leave "caption coming soon")
 - [ ] **Approvals:** BetterHelp has approved showing this work. Partners and anyone shown in a photo are fine with it.

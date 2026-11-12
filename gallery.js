@@ -7,7 +7,6 @@
   if (!pieces.length && !photos.length) return;
 
   var here = document.currentScript || document.querySelector('script[src$="gallery.js"]');
-  var avatar = here && here.src ? new URL('images/avatar.jpg', here.src).href : ''; // ✎ EDIT: your round photo is the file images/avatar.jpg
 
   var box = document.createElement('div');
   box.className = 'lb';
@@ -25,7 +24,7 @@
         '<div class="pv-beads" aria-hidden="true"></div>' +
       '</div>' +
       '<aside class="pv-side">' +
-        '<header class="pv-head"><img class="pv-ava" alt=""><div><span class="pv-sub"></span></div></header>' +
+        '<header class="pv-head"><div><span class="pv-sub"></span></div></header>' +
         '<h3 class="pv-title"></h3>' +
         '<div class="pv-cap"></div>' +
         '<p class="pv-tags"></p>' +
@@ -37,9 +36,7 @@
   var q = function (s) { return box.querySelector(s); };
   var img = q('.lb-img'), tab = q('.pv-tab'), beads = q('.pv-beads'), sub = q('.pv-sub'),
       title = q('.pv-title'), cap = q('.pv-cap'), tags = q('.pv-tags'), count = q('.pv-count'),
-      stamp = q('.pv-stamp'), ava = q('.pv-ava'), prev = q('.lb-prev'), next = q('.lb-next'), post = q('.pv');
-  ava.src = avatar;
-  ava.onerror = function () { ava.style.display = 'none'; };
+      stamp = q('.pv-stamp'), prev = q('.lb-prev'), next = q('.lb-next'), post = q('.pv');
   var dates = [], list = [], i = 0, opener = null, name = '', group = '', num = '';
 
   function show(n) {
@@ -69,7 +66,6 @@
     title.textContent = name;
     var gl = group === 'all pieces' ? 'q3 2026' : group; // ✎ EDIT: 'q3 2026' is the label shown on Q3 posts
     sub.textContent = slug ? (/betterhelp/i.test(gl) ? gl : 'betterhelp · ' + gl) /* ✎ EDIT: 'betterhelp · ' is the first part of the line at the top of each post */ : gl;
-    ava.hidden = !avatar;
     beads.innerHTML = list.length <= 24 ? list.map(function () { return '<i></i>'; }).join('') : '';
     if (slug) setCaption(slug);
     box.hidden = false;
