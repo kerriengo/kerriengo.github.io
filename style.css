@@ -850,3 +850,9 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
    EDIT: size and spacing are in this rule. ===== */
 .yearlabel { margin: 30px 0 18px; font-family: var(--mono); font-size: 12px; letter-spacing: .3em; color: var(--my-muted); }
 .yearlabel::after { content: ""; display: inline-block; width: 46px; height: 1px; margin-left: 14px; vertical-align: middle; background: var(--c4); }
+
+/* ===== SECTION: the Marketing Brew press tile (a text tile that opens the article in a new tab) =====
+   EDIT: the words are in index.html and work.html (search press-art). Text size = font-size below. ===== */
+.press-art { position: absolute; inset: 0; display: grid; place-content: center; gap: 10px; text-align: center; background: var(--cream); color: var(--c5); font-family: var(--serif-g); font-size: 24px; letter-spacing: .08em; line-height: 1.15; padding: 0 14px; transition: opacity .8s ease; }
+.press-art small { font-family: var(--mono); font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--c8); }
+.tile.press:hover .press-art, .tile.press:focus-visible .press-art { opacity: .1; }

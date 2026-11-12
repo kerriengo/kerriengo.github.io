@@ -40,6 +40,7 @@ work/
   y25-september-tentpole.html   Fall 2025 campaign page
   y25-social-impact.html        Fall 2025 social impact page
   y25-seasonal-messaging.html   Holiday 2025 campaign page
+  y25-culture-and-trends.html   TSITP, TLOASG and Spotify Wrapped trend posts
   q1-feel-lighter.html        Q1 campaign page + its posts
   q2-with-you.html            Q2 campaign page
   q3-we-believe-in-better.html  Q3 campaign page
@@ -63,6 +64,8 @@ _old-versions/        Old drafts. Stays on my computer. Never uploaded.
 - The **home page** shows one tile per campaign (2025 row, 2026 row).
 - The **Work page** shows every post from **September 2025 on**, in one section per campaign, oldest first. Each section has a "view campaign" link.
 - The **Social archive** holds the earlier 2025 posts (before September 2025).
+- **Culture and trends** is its own section: TSITP (summer 2025, included on purpose even though it is before September), the TLOASG trend and Spotify Wrapped.
+- The **Marketing Brew** tile is an outside link. To change where it goes, search `marketingbrew` in `index.html` and `work.html` (Cmd + Shift + H changes both).
 - Every post card appears in **two places**: on its campaign page and on the Work page. If you change a post's title or remove it, do it in **both** files. Use Cmd + Shift + H (find and replace in all files) to change a title everywhere at once.
 
 ---
