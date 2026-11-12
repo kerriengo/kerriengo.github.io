@@ -53,6 +53,7 @@ style.css             ALL the colours, sizes and looks
 gallery.js            The popup that opens when you click a post
 captions.js           The captions shown in the popup
 form.js               Makes the contact form send
+doodles.js            All the little drawn stickers and doodles (cup, heart, camera, pencil, plane...)
 scroll.js             Gentle scroll effects (progress line, footer drift)
 cozy.js               The cozy touches: "now serving" line, the cup in the sidebar, "surprise me"
 images/               Every picture on the site
