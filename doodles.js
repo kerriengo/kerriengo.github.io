@@ -36,6 +36,29 @@
       '<rect x="9" y="16" width="15" height="6" rx="1.5" fill="#6f93a8"/>' +
       '<circle cx="39" cy="35" r="14" fill="#d4b491" stroke="#fce4c1" stroke-width="2.4"/><circle cx="39" cy="35" r="10" fill="#3a2f27"/>' +
       '<circle class="lens-in" cx="39" cy="35" r="6.4" fill="#6f93a8"/><circle cx="36.4" cy="32.4" r="1.9" fill="#fce4c1"/>'),
+    balloon: svg('0 0 40 58',
+      '<path d="M20 44c0 6-3 8-1 14" fill="none" stroke="#fce4c1" stroke-width="3.4" stroke-linecap="round"/>' +
+      '<g ' + O + '><ellipse cx="20" cy="20" rx="15" ry="17" fill="#6f93a8"/><path d="M16 36h8l-4 7z" fill="#6f93a8"/></g>' +
+      '<path d="M12 14q2-6 8-6" fill="none" stroke="#fce4c1" stroke-width="2.6" stroke-linecap="round"/>'),
+    sprout: svg('0 0 48 48',
+      '<path d="M24 44V22" fill="none" stroke="#fce4c1" stroke-width="8" stroke-linecap="round"/>' +
+      '<path d="M24 44V22" fill="none" stroke="#84814d" stroke-width="3.4" stroke-linecap="round"/>' +
+      '<g ' + O + '><path d="M24 24C24 12 14 6 5 8c0 10 8 17 19 16z" fill="#95a882"/><path d="M24 20c0-9 8-14 17-12c0 9-7 14-17 12z" fill="#c8964f"/></g>'),
+    gift: svg('0 0 48 48',
+      '<g ' + O + '><rect x="6" y="20" width="36" height="24" rx="3" fill="#b0735d"/><rect x="4" y="13" width="40" height="10" rx="3" fill="#c8964f"/>' +
+      '<path d="M24 13c-8 0-13-3-10-8c4-3 10 2 10 8zM24 13c8 0 13-3 10-8c-4-3-10 2-10 8z" fill="#fce4c1"/></g>' +
+      '<rect x="21" y="13" width="6" height="31" fill="#fce4c1"/>'),
+    star: svg('0 0 48 48',
+      '<path d="M24 4l6 13 14 2-10 10 3 14-13-7-13 7 3-14L4 19l14-2z" fill="#c8964f" ' + O + '/>' +
+      '<path d="M16 17l8-9" fill="none" stroke="#fce4c1" stroke-width="2.4" stroke-linecap="round"/>'),
+    leaf: svg('0 0 48 48',
+      '<path d="M24 46V28" fill="none" stroke="#fce4c1" stroke-width="7" stroke-linecap="round"/>' +
+      '<path d="M24 46V28" fill="none" stroke="#6b4630" stroke-width="3" stroke-linecap="round"/>' +
+      '<path d="M24 4c10 6 17 14 12 24c-3 3-8 4-12 3c-4 1-9 0-12-3C7 18 14 10 24 4z" fill="#b4684a" ' + O + '/>' +
+      '<path d="M24 10v22M24 18l-6-4M24 24l7-5M24 28l-6-3" fill="none" stroke="#fce4c1" stroke-width="2" stroke-linecap="round"/>'),
+    note: svg('0 0 48 48',
+      '<g fill="none" stroke="#fce4c1" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><path d="M18 9l24-5M18 9v27M42 4v26"/><ellipse cx="12" cy="37" rx="7" ry="5"/><ellipse cx="36" cy="31" rx="7" ry="5"/></g>' +
+      '<g fill="#6f93a8" stroke="#6f93a8" stroke-width="4.5" stroke-linecap="round"><path d="M18 9l24-5M18 9v27M42 4v26" fill="none"/><ellipse cx="12" cy="37" rx="7" ry="5" stroke="none"/><ellipse cx="36" cy="31" rx="7" ry="5" stroke="none"/></g>'),
     plane: svg('0 0 56 48',
       '<path d="M4 22L52 4L36 44L26 30Z" fill="#95a882" ' + O + '/>' +
       '<path d="M26 30L52 4M26 30L24 42L32 36" fill="none" stroke="#fce4c1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'),
@@ -109,7 +132,11 @@
   // ---------- 5. paper plane on campaign pages (not interactive) ----------
   if (inWork && !isPhoto && !isProd) {
     var b = document.querySelector('.main .box');
-    if (b) { b.classList.add('has-doodle'); b.appendChild(el('span', 'doodle plane', D.plane)); }
+    // ✎ EDIT which doodle each campaign gets. Names: plane, balloon, sprout, gift, star, leaf, note
+    var pick = { 'q1-feel-lighter': 'balloon', 'q2-with-you': 'plane', 'q3-we-believe-in-better': 'sprout', 'q4-holiday-campaign': 'gift',
+      'y25-september-tentpole': 'star', 'y25-social-impact': 'plane', 'y25-seasonal-messaging': 'leaf', 'y25-culture-and-trends': 'note' };
+    var slug = path.replace(/^.*\//, '').replace('.html', '');
+    if (b) { b.classList.add('has-doodle'); b.appendChild(el('span', 'doodle plane', D[pick[slug] || 'plane'])); }
   }
 
   // ---------- 6. Fujifilm-style camera in the lower right of the Photography intro box (click for a shutter flash) ----------

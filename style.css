@@ -1041,7 +1041,8 @@ body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(-
 .inline-doodle { display: var(--my-stickers-inline, inline-block); width: 34px; height: 34px; margin-left: 12px; vertical-align: middle; }
 .phone-doodle { width: 28px; height: 38px; transform: rotate(8deg); }
 .has-doodle { position: relative; }
-.doodle.plane { position: absolute; top: -20px; right: 28px; width: 64px; transform: rotate(-8deg); pointer-events: none; }
+.doodle.plane { position: absolute; top: -16px; right: 30px; width: 44px; transform: rotate(-8deg); pointer-events: none; }
+.doodle.plane svg { width: 100%; height: auto; }
 .doodle.canister { position: absolute; right: 30px; bottom: -22px; width: 36px; transform: rotate(8deg); transition: transform .3s ease; }
 .doodle.canister:hover { transform: rotate(-4deg) scale(1.1); }
 .clapper { padding: 0; background: none; border: 0; cursor: pointer; width: 46px; height: 42px; }
