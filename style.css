@@ -22,11 +22,11 @@
   /* ---- COLOURS (dark film theme) ---- */
   --my-page: #3a2f27;          /* page background (dark brown), also top bar and sidebar */
   --my-card: #473a30;          /* tiles and cards */
-  --my-box: #54463b;           /* the text boxes (numbers, experience, tools, campaign info). Lighter = easier to tell apart from the page */
+  --my-box: #5c4d41;           /* the text boxes (numbers, experience, tools, campaign info). Lighter = easier to tell apart from the page */
   --my-text: #fce4c1;          /* main text (cream) */
   --my-headline: #fff1dc;      /* headlines and titles: the lighter cream from the popup's left panel */
-  --my-muted: #d8c4a0;         /* smaller, quieter text (tan). Lighter = easier to read */
-  --my-soft: #e3cfa8;          /* paragraph text inside boxes */
+  --my-muted: #e6d4b3;         /* smaller, quieter text (tan). Lighter = easier to read */
+  --my-soft: #f0dfbf;          /* paragraph text inside boxes */
   --my-field-focus: #52443a;   /* contact form box when you click in it */
   --my-accent: #c8964f;        /* amber: film date stamps, frame numbers, selected pills */
 
