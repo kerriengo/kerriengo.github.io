@@ -842,3 +842,6 @@ body.film .tagline { font-size: 11.5px; letter-spacing: .12em; }
 .main .head, .main .box, .main .grid, .main .grid.big, .main .about-grid, .main .film-gallery,
 body.film .grid, body.film .grid.big, body.film .film-gallery { max-width: var(--my-content-w); }
 .main > .box.next { max-width: var(--my-content-w); }
+
+/* polaroid photos: keep faces in frame when a tall photo is cropped to 4:5 */
+.pola img { object-position: center 40%; }
