@@ -22,7 +22,6 @@ window.CAPTIONS = {
   "y26pp/october-quote-story": { caption: "", tags: "" }, // therapy gives you a space to ask questions
   "y26pp/october-rewrite-guide": { caption: "", tags: "" }, // the rewrite guide
   "y26pp/october-therapist-impact-fund": { caption: "", tags: "" }, // therapist impact fund
-  "y26pp/october-submit-your-own-stories": { caption: "", tags: "" }, // submit your own rewrite (stories)
   "y26pp/october-rule-2-story-series": { caption: "", tags: "" }, // rule 2 story series
   "y26pp/november-five-female-leaders": { caption: "", tags: "" }, // five female leaders
   // ---- social impact 2026 + pinned posts + hfc world alzheimer's month ----
