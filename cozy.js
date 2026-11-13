@@ -36,7 +36,7 @@
     intro.parentNode.insertBefore(chip, intro);
     // ✎ EDIT the list of pages "surprise me" can open
     var pages = ['q1-feel-lighter', 'q2-with-you', 'q3-we-believe-in-better', 'q4-holiday-campaign',
-      'y25-september-tentpole', 'y25-social-impact', 'y25-seasonal-messaging', 'y25-culture-and-trends', 'photography'];
+      'y25-september-tentpole', 'social-impact', 'y25-seasonal-messaging', 'y25-culture-and-trends', 'photography'];
     document.getElementById('surprise').addEventListener('click', function (e) {
       e.preventDefault();
       window.location.href = base + 'work/' + pages[Math.floor(Math.random() * pages.length)] + '.html';

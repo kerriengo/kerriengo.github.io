@@ -18,8 +18,6 @@
 // =====================================================================
 window.CAPTIONS = {
   // ---- permission project ----
-  "y26pp/october-quote-story": { caption: "", tags: "" }, // therapy gives you a space to ask questions
-  "y26pp/october-rewrite-guide": { caption: "", tags: "" }, // the rewrite guide
   "y26pp/october-therapist-impact-fund": { caption: "", tags: "" }, // therapist impact fund
   "y26pp/november-five-female-leaders": { caption: "", tags: "" }, // five female leaders
   // ---- social impact 2026 + pinned posts + hfc world alzheimer's month ----
@@ -29,6 +27,7 @@ window.CAPTIONS = {
   "archive/social-impact-hfc-world-alzheimers-month": { caption: "", tags: "" }, // hfc: world alzheimer's month
   // ---- reels ----
   "reel/world-suicide-prevention-day": { caption: "", tags: "" }, // world suicide prevention day reel
+  "reel/prepared": { caption: "", tags: "" }, // 100% prepared reel
   "reel/survival-mode": { caption: "", tags: "" }, // survival mode reel
   "reel/no-deadline": { caption: "", tags: "" }, // there's no deadline reel
   // ---- feel lighter (q1) ----

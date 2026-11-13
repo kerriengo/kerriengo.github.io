@@ -39,10 +39,8 @@ about.html            About page
 resume.html           Resume page (profile, experience, skills, education)
 resume.pdf            The downloadable one-page resume (made from resume.html with Print > Save as PDF)
 work/
-  y26-permission-project.html   Permission Project campaign (World Mental Health Day 2026)
-  y26-social-impact.html        Fall 2026 social impact page (NBCF breast cancer awareness month)
+  social-impact.html            Social impact page (2025 to 2026): partners + causes, permission project
   y25-september-tentpole.html   Fall 2025 campaign page
-  y25-social-impact.html        Fall 2025 social impact page
   y25-seasonal-messaging.html   Holiday 2025 campaign page
   y25-culture-and-trends.html   TSITP, TLOASG and Spotify Wrapped trend posts
   q1-feel-lighter.html        Q1 campaign page + its posts
