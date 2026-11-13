@@ -46,7 +46,7 @@ work/
   q2-with-you.html            Q2 campaign page
   q3-we-believe-in-better.html  Q3 campaign page
   q4-holiday-campaign.html    Q4 campaign page
-  archive.html                Social archive (2025 posts before the fall campaigns)
+  archive.html                B-sides (the older posts, formerly the social archive)
   activations.html            In-person events
   photography.html            Photo gallery
   production.html             HIDDEN: not linked anywhere until there is work to show
@@ -69,7 +69,7 @@ _old-versions/        Old drafts. Stays on my computer. Never uploaded.
 
 - The **home page** shows one tile per campaign (2025 row, 2026 row).
 - The **Work page** shows the **first 4 posts** of each campaign (one row), then a "view the full campaign" button that opens that campaign's page with every post. The big count at the top still counts all posts.
-- The **Social archive** holds the earlier 2025 posts (before September 2025).
+- The **B-sides** page holds the older posts.
 - **Culture and trends** is its own section: TSITP (summer 2025, included on purpose even though it is before September), the TLOASG trend and Spotify Wrapped.
 - The **Marketing Brew** tile is an outside link. To change where it goes, search `marketingbrew` in `index.html` and `work.html` (Cmd + Shift + H changes both).
 - A post's card appears on its campaign page, and also on the Work page if it is one of the first 4. If you change a post's title or remove it, do it in **both** files. Use Cmd + Shift + H (find and replace in all files) to change a title everywhere at once.

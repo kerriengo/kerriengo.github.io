@@ -1240,3 +1240,9 @@ body.film .main .box p.do-note { line-height: 1.4; }
 .lb-vid[hidden] { display: none; }
 
 .lb-img[hidden] { display: none; }
+
+/* ===== contact form words use the same cream as the resume lines (B.S. business administration...). Change it in --my-headline at the top. ===== */
+.foot-inner .foot-form .foot-h, .foot-form input, .foot-form textarea, .foot-form .form-note { color: var(--my-headline); }
+.foot-form ::placeholder { color: var(--my-headline); opacity: .8; }
+.foot-form button { color: var(--my-headline); border-color: var(--my-headline); }
+.foot-form button:hover:not(:disabled), .foot-form button:focus-visible { color: var(--ink); }
