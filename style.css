@@ -1246,3 +1246,5 @@ body.film .main .box p.do-note { line-height: 1.4; }
 .foot-form ::placeholder { color: var(--my-headline); opacity: .8; }
 .foot-form button { color: var(--my-headline); border-color: var(--my-headline); }
 .foot-form button:hover:not(:disabled), .foot-form button:focus-visible { color: var(--ink); }
+/* all footer copy (sitemap, follow, copyright) uses the same cream as the form */
+.foot-inner .foot-h, .foot-col a, .foot-c.in-photo { color: var(--my-headline); }
