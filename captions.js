@@ -17,11 +17,16 @@
 //   - Empty caption = the post shows "caption coming soon".
 // =====================================================================
 window.CAPTIONS = {
+  // ---- permission project ----
+  "y26pp/september-10-unwritten-rules": { caption: "", tags: "" }, // the 10 unwritten rules
+  "y26pp/october-quote-story": { caption: "", tags: "" }, // therapy gives you a space to ask questions
+  "y26pp/october-rewrite-guide": { caption: "", tags: "" }, // the rewrite guide
+  "y26pp/october-therapist-impact-fund": { caption: "", tags: "" }, // therapist impact fund
+  "y26pp/october-submit-your-own-stories": { caption: "", tags: "" }, // submit your own rewrite (stories)
+  "y26pp/october-rule-2-story-series": { caption: "", tags: "" }, // rule 2 story series
+  "y26pp/november-five-female-leaders": { caption: "", tags: "" }, // five female leaders
   // ---- social impact 2026 + pinned posts + hfc world alzheimer's month ----
-  "y26si/october-therapist-impact-fund": { caption: "", tags: "" }, // therapist impact fund
   "y26si/october-nbcf-breast-cancer-awareness-month": { caption: "", tags: "" }, // nbcf breast cancer awareness month
-  "y26si/october-permission-project-stories": { caption: "", tags: "" }, // permission project stories
-  "y26si/november-five-female-leaders": { caption: "", tags: "" }, // permission project: five female leaders
   "q3/pinned-posts-better-care-better-outcomes": { caption: "", tags: "" }, // better care = better outcomes
   "q3/pinned-posts-better-for-providers": { caption: "", tags: "" }, // better for providers
   "archive/social-impact-hfc-world-alzheimers-month": { caption: "", tags: "" }, // hfc: world alzheimer's month
