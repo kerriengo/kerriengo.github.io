@@ -1228,3 +1228,10 @@ body.film .main .box p.do-note { line-height: 1.4; }
   .main { min-height: 0 !important; }
   .foot, footer, script, .lb { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
 }
+
+
+/* ===== SECTION: VIDEO CARD (the reel on the Q3 page and the Work page) =====
+   EDIT: the video file is video/wspd-reel.mp4. Card shape = aspect-ratio below. ===== */
+.tile.vid .shot { aspect-ratio: 4 / 5; background: #000; }
+.tile.vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.tile.vid:hover { cursor: default; }

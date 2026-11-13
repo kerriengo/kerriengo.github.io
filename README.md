@@ -60,6 +60,7 @@ doodles.js            All the little drawn stickers and doodles (cup, heart, cam
 scroll.js             Gentle scroll effects (progress line, footer drift)
 cozy.js               The cozy touches: "now serving" line, the cup in the sidebar, "surprise me"
 favicon-32.png, favicon-64.png, apple-touch-icon.png   The little icon in the browser tab (your profile photo with a brick ring)
+video/                The reel video and its poster image
 images/               Every picture on the site
 README.md             This guide
 .gitignore            Tells GitHub what NOT to upload
