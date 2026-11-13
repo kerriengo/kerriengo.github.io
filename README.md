@@ -47,7 +47,6 @@ work/
   q3-we-believe-in-better.html  Q3 campaign page
   q4-holiday-campaign.html    Q4 campaign page
   archive.html                Social archive (2025 posts before the fall campaigns)
-  process.html                How I build a campaign (brainstorm, mood board, templates, grid)
   activations.html            In-person events
   photography.html            Photo gallery
   production.html             HIDDEN: not linked anywhere until there is work to show
