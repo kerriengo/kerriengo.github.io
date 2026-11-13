@@ -19,7 +19,7 @@
       '<button class="lb-x" aria-label="Close">&times;</button>' +
       '<div class="pv-media"><span class="pv-tab"></span>' +
         '<button class="lb-nav lb-prev" aria-label="Previous slide">&#8592;</button>' +
-        '<figure class="pv-fig"><img class="lb-img" alt=""><span class="pv-stamp"></span></figure>' +
+        '<figure class="pv-fig"><img class="lb-img" alt=""><video class="lb-vid" controls playsinline preload="metadata" hidden></video><span class="pv-stamp"></span></figure>' +
         '<button class="lb-nav lb-next" aria-label="Next slide">&#8594;</button>' +
         '<div class="pv-beads" aria-hidden="true"></div>' +
       '</div>' +
@@ -34,7 +34,7 @@
   document.body.appendChild(box);
 
   var q = function (s) { return box.querySelector(s); };
-  var img = q('.lb-img'), tab = q('.pv-tab'), beads = q('.pv-beads'), sub = q('.pv-sub'),
+  var img = q('.lb-img'), vid = q('.lb-vid'), tab = q('.pv-tab'), beads = q('.pv-beads'), sub = q('.pv-sub'),
       title = q('.pv-title'), cap = q('.pv-cap'), tags = q('.pv-tags'), count = q('.pv-count'),
       stamp = q('.pv-stamp'), prev = q('.lb-prev'), next = q('.lb-next'), post = q('.pv');
   var dates = [], list = [], i = 0, opener = null, name = '', group = '', num = '';
@@ -59,7 +59,7 @@
       var s = document.createElement('span'); s.className = 't' + (k % 4); s.textContent = t.charAt(0) === '#' ? t : '#' + t; tags.appendChild(s);
     });
   }
-  function openList(items, t, g, start, el, slug, label, ds) {
+  function openList(items, t, g, start, el, slug, label, ds, video, poster) {
     dates = ds || []; opener = el; list = items; name = t; group = g;
     post.className = 'pv' + (slug ? '' : ' solo');
     tab.textContent = label || 'now showing'; // ✎ EDIT: 'post 01' style label in the corner
@@ -74,10 +74,16 @@
     box.hidden = false;
     document.body.style.overflow = 'hidden';
     show(start || 0);
+    // ✎ EDIT: reels play inside the popup. The file comes from the card's data-video link.
+    if (video) {
+      img.hidden = true; vid.hidden = false; vid.poster = poster || ''; vid.src = video;
+      prev.style.visibility = next.style.visibility = 'hidden'; beads.innerHTML = ''; stamp.hidden = true;
+    } else { vid.pause(); vid.hidden = true; vid.removeAttribute('src'); img.hidden = false; }
     requestAnimationFrame(function () { requestAnimationFrame(function () { box.classList.add('open'); }); });
     q('.lb-x').focus();
   }
   function close() {
+    vid.pause();
     box.classList.remove('open');
     document.body.style.overflow = '';
     if (opener) opener.focus();
@@ -88,7 +94,7 @@
     el.addEventListener('click', function (e) {
       e.preventDefault();
       var n = el.querySelector('.cap small');
-      openList(el.getAttribute('data-images').split('|'), el.getAttribute('data-title'), el.getAttribute('data-group'), 0, el, el.getAttribute('data-slug') || 'x', n ? (/^\d+$/.test(n.textContent.trim()) ? 'post ' + n.textContent : 'best of') : 'now showing', []);
+      openList(el.getAttribute('data-images').split('|'), el.getAttribute('data-title'), el.getAttribute('data-group'), 0, el, el.getAttribute('data-slug') || 'x', n ? (/^\d+$/.test(n.textContent.trim()) ? 'post ' + n.textContent : 'best of') : 'now showing', [], el.getAttribute('data-video'), el.getAttribute('data-poster'));
     });
   });
   photos.forEach(function (el) {

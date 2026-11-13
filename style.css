@@ -1230,24 +1230,13 @@ body.film .main .box p.do-note { line-height: 1.4; }
 }
 
 
-/* ===== SECTION: VIDEO CARD (the reel on the Q3 page and the Work page) =====
-   EDIT: the video file is video/wspd-reel.mp4. Card shape = aspect-ratio below. ===== */
-.tile.vid .shot { aspect-ratio: 4 / 5; background: #000; }
-.tile.vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.tile.vid:hover { cursor: default; }
 
 
-/* ===== SECTION: REELS shine on their own (no card, no border, no padding: just the video, full height 9:16) =====
-   EDIT: glow strength = the last shadow value. Corner roundness = border-radius. Width on the Q3 page = max-width. ===== */
-.tile.vid, body.film .tile.vid { background: none; padding: 0; border: 0; box-shadow: none; border-radius: 0; transform: none; }
-.tile.vid .shot { aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; background: #000; box-shadow: 0 0 0 1px rgba(252, 228, 193, .22), 0 18px 40px rgba(0, 0, 0, .5), 0 0 44px rgba(200, 150, 79, .2); }
-.tile.vid .cap { margin-top: 12px; padding: 0 2px; }
-.tile.vid:hover { transform: none; box-shadow: none; }
-.reel-tag { position: absolute; top: 12px; left: 12px; z-index: 2; padding: 3px 10px; font-family: var(--mono); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: #3a2f27; background: var(--c4); border-radius: 999px; pointer-events: none; }
-.grid:has(.tile.vid) { align-items: start; }
-.tile.vid:only-child { max-width: 270px; }
 
-.tile.vid.land .shot { aspect-ratio: 3 / 2; }
-.tile.vid.land:only-child { max-width: 440px; }
+/* ===== SECTION: REELS are regular posts (same card, hover and popup) with a small play badge on the thumbnail =====
+   EDIT: badge colour = background below. The video files are in the video/ folder. ===== */
+.tile.reel .shot::after { content: ""; position: absolute; right: 12px; bottom: 12px; width: 34px; height: 34px; border-radius: 50%; background: rgba(252, 241, 220, .92) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9 6.5v11l9-5.5z' fill='%23b0735d'/></svg>") center / 22px no-repeat; box-shadow: 0 2px 6px rgba(0,0,0,.35); pointer-events: none; z-index: 2; }
+.lb-vid { display: block; max-width: 100%; max-height: calc(min(86vh, var(--my-popup-h)) - 130px); width: auto; height: auto; border: 5px solid #fff; border-radius: 6px; background: #000; box-shadow: 0 5px 0 rgba(212, 180, 145, .6); }
+.lb-vid[hidden] { display: none; }
 
-.grid:has(> .tile.vid.land:only-child) { grid-template-columns: minmax(0, 440px); }
+.lb-img[hidden] { display: none; }

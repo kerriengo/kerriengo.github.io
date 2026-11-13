@@ -17,6 +17,10 @@
 //   - Empty caption = the post shows "caption coming soon".
 // =====================================================================
 window.CAPTIONS = {
+  // ---- reels ----
+  "reel/world-suicide-prevention-day": { caption: "", tags: "" }, // world suicide prevention day reel
+  "reel/survival-mode": { caption: "", tags: "" }, // survival mode reel
+  "reel/no-deadline": { caption: "", tags: "" }, // there's no deadline reel
   // ---- feel lighter (q1) ----
   "q1/february-feel-lighter-quote": { caption: "", tags: "" }, // feel lighter quote (1)
   "q1/february-one-love-social-impact-collab": { caption: "", tags: "" }, // one love social impact collab (4)
