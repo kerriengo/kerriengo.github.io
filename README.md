@@ -39,6 +39,7 @@ about.html            About page
 resume.html           Resume page (profile, experience, skills, education)
 resume.pdf            The downloadable one-page resume (made from resume.html with Print > Save as PDF)
 work/
+  y26-social-impact.html        Fall 2026 social impact page (Permission Project, Therapist Impact Fund, NBCF)
   y25-september-tentpole.html   Fall 2025 campaign page
   y25-social-impact.html        Fall 2025 social impact page
   y25-seasonal-messaging.html   Holiday 2025 campaign page

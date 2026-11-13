@@ -134,7 +134,7 @@
     var b = document.querySelector('.main .box');
     // ✎ EDIT which doodle each campaign gets. Names: plane, balloon, sprout, gift, star, leaf, note
     var pick = { 'q1-feel-lighter': 'balloon', 'q2-with-you': 'plane', 'q3-we-believe-in-better': 'sprout', 'q4-holiday-campaign': 'gift',
-      'y25-september-tentpole': 'star', 'y25-social-impact': 'plane', 'y25-seasonal-messaging': 'leaf', 'y25-culture-and-trends': 'note' };
+      'y25-september-tentpole': 'star', 'y25-social-impact': 'plane', 'y26-social-impact': 'plane', 'y25-seasonal-messaging': 'leaf', 'y25-culture-and-trends': 'note' };
     var slug = path.replace(/^.*\//, '').replace('.html', '');
     if (b) { b.classList.add('has-doodle'); b.appendChild(el('span', 'doodle plane', D[pick[slug] || 'plane'])); }
   }

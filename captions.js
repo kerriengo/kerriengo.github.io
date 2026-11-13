@@ -17,6 +17,14 @@
 //   - Empty caption = the post shows "caption coming soon".
 // =====================================================================
 window.CAPTIONS = {
+  // ---- social impact 2026 + pinned posts + hfc world alzheimer's month ----
+  "y26si/october-therapist-impact-fund": { caption: "", tags: "" }, // therapist impact fund
+  "y26si/october-nbcf-breast-cancer-awareness-month": { caption: "", tags: "" }, // nbcf breast cancer awareness month
+  "y26si/october-permission-project-stories": { caption: "", tags: "" }, // permission project stories
+  "y26si/november-five-female-leaders": { caption: "", tags: "" }, // permission project: five female leaders
+  "q3/pinned-posts-better-care-better-outcomes": { caption: "", tags: "" }, // better care = better outcomes
+  "q3/pinned-posts-better-for-providers": { caption: "", tags: "" }, // better for providers
+  "archive/social-impact-hfc-world-alzheimers-month": { caption: "", tags: "" }, // hfc: world alzheimer's month
   // ---- reels ----
   "reel/world-suicide-prevention-day": { caption: "", tags: "" }, // world suicide prevention day reel
   "reel/survival-mode": { caption: "", tags: "" }, // survival mode reel
@@ -138,7 +146,7 @@ window.CAPTIONS = {
   "archive/summer-campaign-more-from-summer-campaign": { caption: "", tags: "" }, // more from summer campaign (1)
   "archive/social-impact-bh-scholarship-announcement": { caption: "Our Therapist Impact Fund is back and ready to help rewrite the rules. \n\nSo many of us, especially women, are taught to take care of everyone else while keeping our own needs small. We've lived by those rules for far too long. That's why, as part of our Permission Project, we're investing in the therapists who help you take your permission back. And your life along with it.\n\n✨ NextGen Scholarship: 5 scholarships of $10,000 for students studying to become therapists\n\n✨ Legacy Loan Relief: 5 awards of $10,000 in student loan relief for therapists in the BetterHelp community\n\nApplications are now open—and this is your chance. More details linked here 👉 betterhelp.com/therapist-impact-fund \n\nGood luck to everyone applying!", tags: "#TherapistImpactFund #NextGenScholarship #LoanRelief #FutureofTherapy" }, // bh scholarship announcement (5)
   "archive/social-impact-bh-x-mind4youth": { caption: "", tags: "" }, // bh x mind4youth (2)
-  "archive/social-impact-hfc-collab": { caption: "Within every caregiver is someone doing their best to hold on.\n\nTo love. To hope. To stay strong.\n\nBut no one should have to do that alone.\n\nThis National Family Caregivers Month, we honor those showing up every day for the people they love. 💚🧡\n\nCare needs community. Community reminds you that you’re not the only one holding it all together. 🫂", tags: "#NationalFamilyCaregiversMonth #MentalHealthAwareness #MentalHealthMatters" }, // hfc collab (9)
+  "archive/social-impact-hfc-caregivers-month": { caption: "Within every caregiver is someone doing their best to hold on.\n\nTo love. To hope. To stay strong.\n\nBut no one should have to do that alone.\n\nThis National Family Caregivers Month, we honor those showing up every day for the people they love. 💚🧡\n\nCare needs community. Community reminds you that you’re not the only one holding it all together. 🫂", tags: "#NationalFamilyCaregiversMonth #MentalHealthAwareness #MentalHealthMatters" }, // hfc collab (9)
   "archive/social-impact-lewis-capaldi-giving-tuesday": { caption: "", tags: "" }, // lewis capaldi giving tuesday (5)
   "archive/social-impact-twloha-world-suicide-month": { caption: "This World Suicide Prevention Month, we’re honored to highlight one of our partners, TWLOHA.\n\nThrough their Treatment & Recovery Scholarship, more people are receiving therapy, building coping tools, and finding hope in the hardest moments.\n\nTogether, we can help people stay 💚💜", tags: "#WorldSuicidePreventionMonth #TWLOHA #MentalHealthMatters #MentalHealthAwareness" }, // twloha: world suicide month (4)
   "archive/social-impact-veterans-day-collab": { caption: "Today we honor the veterans who served our nation, and recognize the battles that don’t end when service does.\n\nWe’re proud to stand with @travismanionfoundation, whose mission is to help veterans and families of the fallen heal through purpose, leadership, and community.\n\nTogether we can strengthen mental health and remind every veteran they are not alone 💚", tags: "#VeteransDay #TravisManionFoundation #MentalHealthMatters #MentalHealthAwareness" }, // veterans day collab (1)
