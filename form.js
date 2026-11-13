@@ -17,10 +17,10 @@ document.querySelectorAll('.foot-form, .contact-form').forEach(function (form) {
       .then(function (r) {
         if (r.ok) { form.reset(); note.textContent = "sent! i'll write back soon ✦"; }
         // ✎ EDIT the words inside the quote marks on the next line: shown if sending fails
-        else { note.textContent = 'something went wrong. try again or email me.'; }
+        else { note.textContent = 'something went wrong. please try again in a bit.'; }
       })
       // ✎ EDIT the words inside the quote marks on the next line: shown if sending fails
-      .catch(function () { note.textContent = 'something went wrong. try again or email me.'; })
+      .catch(function () { note.textContent = 'something went wrong. please try again in a bit.'; })
       .finally(function () { btn.disabled = false; });
   });
 });

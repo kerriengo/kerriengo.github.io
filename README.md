@@ -110,7 +110,7 @@ Your name, tagline, Instagram name, Formspree ID, nav links.
 1. Press **Cmd + Shift + H**. This is Find and Replace across all files.
 2. Top box: type what is there now. Examples:
    - `your-handle` → your Instagram name
-   - `YOUR_FORM_ID` → your Formspree form ID
+   - `mrpqbyjk` is your Formspree form ID (already set)
    - `social media, creative direction, photography` → your new tagline
 3. Second box: type what you want instead.
 4. Click the **Replace All** icon (two little arrows). Confirm.
@@ -263,7 +263,7 @@ The form sits at the bottom of every page. It sends messages to your email throu
 1. Go to **formspree.io**. Sign up with the email where you want messages.
 2. Click **New form**. Name it "Portfolio".
 3. Copy the form ID (the short code at the end of the form's web address).
-4. Press **Cmd + Shift + H**. Replace `YOUR_FORM_ID` with your code. Click **Replace All**.
+4. Press **Cmd + Shift + H**. Replace `mrpqbyjk` with the new code. Click **Replace All**.
 5. Open your live site. Send yourself a test message.
 6. Check your email. Formspree may ask you to confirm the first time.
 
@@ -298,7 +298,7 @@ If something breaks: **Cmd + Z**, **Cmd + S**.
 **One-time check:** your repository must be named `kerriengo.github.io` and be Public. It already is.
 
 ### 9.1 Before you publish: checklist
-- [ ] `YOUR_FORM_ID` replaced (section 6)
+- [x] Formspree ID `mrpqbyjk` is set (section 6)
 - [ ] `your-handle` replaced with your Instagram name (section 4)
 - [x] Photos of me are added: `avatar.jpg`, `portrait.jpg`
 - [ ] Search `Draft:` and replace every draft sentence on the campaign pages with your words
@@ -369,7 +369,7 @@ Vercel does the same job (hosts the site) with a few extras:
 | A picture is missing on the live site but fine on my Mac | File names are case-sensitive on GitHub. Make the file name and the name in the page match exactly, all lowercase. |
 | My change isn't showing on the live site | Wait 1 to 2 minutes. Refresh with **Cmd + Shift + R**. Check you clicked **Push origin**. |
 | The whole page looks broken | **Cmd + Z** in the file you just edited. Probably half a block was deleted. |
-| The contact form doesn't send | Check you replaced `YOUR_FORM_ID`. Check your email for a Formspree confirmation. |
+| The contact form doesn't send | Check the ID in the form matches your Formspree form. Check your email for a Formspree confirmation. |
 | Captions don't appear | Open `captions.js`. Check every line still ends with a comma and every caption is inside quote marks. |
 | Live Server won't start | In VS Code open the top-level folder (`kerriengo.github.io`), then right-click `index.html` → **Open with Live Server**. |
 
