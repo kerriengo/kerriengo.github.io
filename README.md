@@ -37,7 +37,6 @@ index.html            Home page
 work.html             Work page (numbers, experience, tools, then EVERY campaign from Sept 2025 on, in sections)
 about.html            About page
 resume.html           Resume page (profile, experience, skills, education)
-resume.pdf            The downloadable one-page resume (made from resume.html with Print > Save as PDF)
 work/
   social-impact.html            Social impact page (2025 to 2026): partners + causes, permission project
   y25-september-tentpole.html   Fall 2025 campaign page
