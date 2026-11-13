@@ -1183,3 +1183,48 @@ body.film .main .box p.do-note { line-height: 1.4; }
 /* tagline: each descriptor stays on its own line with a diamond between them */
 .tagline { display: flex; flex-direction: column; align-items: center; gap: 2px; line-height: 1.5; }
 .tagline .dia { margin: 0; font-size: 10px; line-height: 1; }
+
+
+/* ===== SECTION: BEST OF row (home), PROCESS page, hidden empty-caption panel ===== */
+.hero-idea { text-transform: none !important; letter-spacing: .02em !important; font-family: var(--sans, "ABeeZee", Arial, sans-serif) !important; font-size: 13px !important; line-height: 1.45; color: var(--my-soft) !important; margin-top: 6px !important; }
+.proc-step { position: relative; }
+.proc-n { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; letter-spacing: .26em; color: var(--c4) !important; }
+.proc-imgs { display: grid; gap: 14px; margin-top: 14px; }
+.proc-imgs.one { grid-template-columns: 1fr; }
+.proc-imgs.one.narrow { max-width: 460px; }
+.proc-imgs.three { grid-template-columns: repeat(3, 1fr); }
+.proc-imgs.four { grid-template-columns: repeat(4, 1fr); }
+.pf { margin: 0; }
+.pf img { width: 100%; height: auto; border-radius: 4px; display: block; background: var(--cream); }
+@media (max-width: 700px) { .proc-imgs.three, .proc-imgs.four { grid-template-columns: repeat(2, 1fr); } }
+.pv.nocap .pv-media { border-right: 0; }
+.pv.nocap .pv-side { display: none; }
+
+/* ===== SECTION: PRINT / PDF (the resume page prints as a clean light page) ===== */
+.print-head, .dl-resume-wrap { display: none; }
+.resume-dl { display: inline-flex; align-items: center; gap: 10px; margin: 10px 0 0; font-family: var(--mono); font-size: var(--t-label, 11px); letter-spacing: .14em; text-transform: uppercase; color: var(--my-text); border: 1px solid var(--c4); padding: 7px 16px; text-decoration: none; transition: background .25s ease, color .25s ease; }
+.resume-dl:hover, .resume-dl:focus-visible { background: var(--c4); color: #3a2f27; outline: none; }
+@media print {
+  @page { size: letter; margin: 0.3in 0.5in; }
+  html, body, body.film { background: #fff !important; color: #1f1a16 !important; }
+  .topbar, .side, .foot, .cup, .read-line, .doodle, .sticker, .back, .next, .resume-dl, .head, .main > .sr, body::after, .intro::before, .intro::after { display: none !important; }
+  .main { margin: 0 !important; padding: 0 !important; background: none !important; }
+  .print-head { display: block !important; margin: 0 0 6px; padding-bottom: 5px; border-bottom: 2px solid #1f1a16; }
+  .print-head b { display: block; font-family: Georgia, serif; font-size: 19pt; font-weight: 400; letter-spacing: .06em; }
+  .print-head span { font-family: "Courier New", monospace; font-size: 9pt; letter-spacing: .08em; }
+  body.film .box { background: none !important; border: 0 !important; box-shadow: none !important; padding: 3px 0 1px !important; margin: 0 0 2px !important; max-width: none !important; }
+  body.film .box h2 { color: #1f1a16 !important; font-size: 9.5pt !important; letter-spacing: .22em; border-bottom: 1px solid #8f7b60; padding-bottom: 2px; margin: 0 0 5px !important; }
+  .sqs { display: none !important; }
+  body.film .box p, body.film .rb li, body.film .skill-row { color: #1f1a16 !important; font-size: 8.2pt !important; line-height: 1.22 !important; }
+  .job { border: 0 !important; padding: 4px 0 1px !important; break-inside: avoid; }
+  .job-title { color: #1f1a16 !important; font-size: 10pt !important; }
+  .job-date, body.film .main .box p.job-meta { color: #5b4a3c !important; font-size: 7.6pt !important; margin: 0 0 3px !important; }
+  .rb li { margin: 0 0 1.5px !important; padding-left: 16px !important; } .rb li::before { border-color: #8f7b60 !important; }
+  .skill-row { border: 0 !important; padding: 2px 0 !important; grid-template-columns: 150px 1fr !important; }
+  .skill-label { color: #5b4a3c !important; font-size: 7.4pt !important; letter-spacing: .08em !important; white-space: nowrap; padding-top: 1px !important; }
+  a { color: #1f1a16 !important; text-decoration: none !important; }
+  html, body, body.film { height: auto !important; min-height: 0 !important; overflow: visible !important; }
+  .main > :last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+  .main { min-height: 0 !important; }
+  .foot, footer, script, .lb { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+}

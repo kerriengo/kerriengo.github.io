@@ -68,6 +68,9 @@
     sub.textContent = slug ? (/betterhelp/i.test(gl) ? gl : 'betterhelp · ' + gl) /* ✎ EDIT: 'betterhelp · ' is the first part of the line at the top of each post */ : gl;
     beads.innerHTML = list.length <= 24 ? list.map(function () { return '<i></i>'; }).join('') : '';
     if (slug) setCaption(slug);
+    // ✎ EDIT: posts without a caption show the image only (no empty caption panel). Add a caption in captions.js and the panel returns.
+    var hasCap = slug && ((window.CAPTIONS || {})[slug] || {}).caption;
+    if (slug && !hasCap) post.className = 'pv solo nocap';
     box.hidden = false;
     document.body.style.overflow = 'hidden';
     show(start || 0);
@@ -85,7 +88,7 @@
     el.addEventListener('click', function (e) {
       e.preventDefault();
       var n = el.querySelector('.cap small');
-      openList(el.getAttribute('data-images').split('|'), el.getAttribute('data-title'), el.getAttribute('data-group'), 0, el, el.getAttribute('data-slug') || 'x', n ? 'post ' + n.textContent : 'now showing', []);
+      openList(el.getAttribute('data-images').split('|'), el.getAttribute('data-title'), el.getAttribute('data-group'), 0, el, el.getAttribute('data-slug') || 'x', n ? (/^\d+$/.test(n.textContent.trim()) ? 'post ' + n.textContent : 'best of') : 'now showing', []);
     });
   });
   photos.forEach(function (el) {

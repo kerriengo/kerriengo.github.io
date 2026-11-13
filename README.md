@@ -37,6 +37,7 @@ index.html            Home page
 work.html             Work page (numbers, experience, tools, then EVERY campaign from Sept 2025 on, in sections)
 about.html            About page
 resume.html           Resume page (profile, experience, skills, education)
+resume.pdf            The downloadable one-page resume (made from resume.html with Print > Save as PDF)
 work/
   y25-september-tentpole.html   Fall 2025 campaign page
   y25-social-impact.html        Fall 2025 social impact page
@@ -47,9 +48,10 @@ work/
   q3-we-believe-in-better.html  Q3 campaign page
   q4-holiday-campaign.html    Q4 campaign page
   archive.html                Social archive (2025 posts before the fall campaigns)
+  process.html                How I build a campaign (brainstorm, mood board, templates, grid)
   activations.html            In-person events
   photography.html            Photo gallery
-  production.html             "Coming soon" page
+  production.html             HIDDEN: not linked anywhere until there is work to show
 style.css             ALL the colours, sizes and looks
 gallery.js            The popup that opens when you click a post
 captions.js           The captions shown in the popup
